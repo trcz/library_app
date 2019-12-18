@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class DzieloController extends AbstractController
 {
     /**
-     * @Route("/dzielo", name="dzielo")
+     * @Route("/a", name="dzielo")
      */
     public function index()
     {
