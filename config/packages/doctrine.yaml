@@ -4,6 +4,7 @@ doctrine:
         server_version: '5.7'
         port: '3306'
         charset: utf8mb4
+        user: 'dev_mysql'
         password: 'adminAdmin1'
         default_table_options:
             charset: utf8mb4
