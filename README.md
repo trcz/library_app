@@ -1,6 +1,3 @@
-<div class="text-white bg-blue mb-2">
-  .text-white on .bg-blue
-</div>
 # library_app
 Library management application for IT studies project
 # Do zrobienia:
@@ -27,7 +24,7 @@ Library management application for IT studies project
   
 # Aktualizacja lokalnego repozytorium:
      git pull upstream master - aktualizuje nasze lokalne repozytorium o zmiany widoczne na githubie
-  _! Uwaga w przypadku kiedy wyskoczy komunikat o niepowodzeniu ściągnięcia, na początku powyższej komendy dodaj polecenie **sudo**_
+  _:warning: Uwaga w przypadku kiedy wyskoczy komunikat o niepowodzeniu ściągnięcia, na początku powyższej komendy dodaj polecenie **sudo**_
   
 # Upload do repozytorium:
   1. Po zalogowaniu do ssh wpisujemy komendę _**cd /var/www/library_app**_
