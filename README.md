@@ -18,6 +18,17 @@ Library management application for IT studies project
   - Route - czyli ścieżka na której metoda zostaje wywoływana np. użytkownik wchodząc na www.test.pl/produkty ma mieć wyświetlone na ekranie wszystkie produkty sklepu, to nad naszą metoda powinno się znaleźć: ![Route](https://github.com/trcz/library_app/blob/master/route.PNG)
   - template - każda metoda musi zwracać template czyli widok który wyświetli się użytkownikowi. w składni funkci render(), pierwszym argumentem jest ścieżka do naszego template'a, zaś drugim jest tablica zmiennych znajdująca się w nawiasach kwadratowych. Gdzie po lewej stronie mamy nazwę tej zmiennej DO UŻYCIA W TEMPLACIE, a po prawej nazwe zmiennej z danej metody. Przykładowo: ![Template](https://github.com/trcz/library_app/blob/master/template.PNG)
   
+ # Łączenie SSH:
+  1. Na komputerach szukamy aplikacji putty i następnie tam wypełniamy pole tekstowe z adresem ip (który podam)
+  2. Następnie logujemy się danymi: username: lukasz, password:adminAdmin1
+  
+# Aktualizacja repozytorium:
+    - _**git pull upstream master**_ - aktualizuje nasze lokalne repozytorium o zmiany widoczne na githubie
+# Upload do repozytorium:
+  1. _**git add -A**_
+  2. _**git commit -m "Wiadomość dotycząca zmian"**_ - zmiany które chcemy wprowadzić z komentarzem dotyczącym co zrobiliśmy za zmiany w celu zidentyfikowania później lepiej zmian jak coś nie będzie działać
+  3. _**git push**_ - aktualizujemy repozytorium na githubie
+  4. Sprawdzamy zmiany na githubie
   
  # Ważne linki:
    - [Symfony dokumentacja](https://symfony.com/doc/current/index.html#gsc.tab=0) - po lewej stronie mamy menu Getting started i tam wszystko jest ładnie opisane.
