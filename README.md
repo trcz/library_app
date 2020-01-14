@@ -9,5 +9,5 @@ Library management application for IT studies project
   
 # Najważniejsze informacje:
 - Każda metoda w kontrolerze musi posiadać:
-  - Route - czyli ścieżka na której metoda zostaje wywoływana np. użytkownik wchodząc na www.test.pl/produkty ma mieć wyświetlone na ekranie wszystkie produkty sklepu, to nad naszą metoda powinno się znaleźć: [Route](https://github.com/trcz/library_app/blob/master/route.PNG)
+  - Route - czyli ścieżka na której metoda zostaje wywoływana np. użytkownik wchodząc na www.test.pl/produkty ma mieć wyświetlone na ekranie wszystkie produkty sklepu, to nad naszą metoda powinno się znaleźć: ![Route](https://github.com/trcz/library_app/blob/master/route.PNG)
   
