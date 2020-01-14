@@ -22,7 +22,7 @@ Library management application for IT studies project
   1. Na komputerach szukamy aplikacji putty i następnie tam wypełniamy pole tekstowe z adresem ip (który podam)
   2. Następnie logujemy się danymi: username: lukasz, password:adminAdmin1
   
-# Aktualizacja repozytorium:
+# Aktualizacja lokalnego repozytorium:
      git pull upstream master - aktualizuje nasze lokalne repozytorium o zmiany widoczne na githubie
 # Upload do repozytorium:
   1. _**git add -A**_
