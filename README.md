@@ -1,11 +1,11 @@
 # library_app
 Library management application for IT studies project
 # Do zrobienia:
-  - [] Poprawienie diagramu klas
-  - [] Poprawienie diagramu interfejsu i dodanie interfejsów (stron) dostępnych dla administratora (takie jak np. strona dodawania pokoju itp.)
-  - [] Zaprojektowanie UI
-  - [] Backend do każdego widoku (napisanie metod w kontrolerach)
-  - [] Frontend do każdego widoku (napisanie template'ów w html.twig)
+  - [ ] Poprawienie diagramu klas
+  - [ ] Poprawienie diagramu interfejsu i dodanie interfejsów (stron) dostępnych dla administratora (takie jak np. strona dodawania pokoju itp.)
+  - [ ] Zaprojektowanie UI
+  - [ ] Backend do każdego widoku (napisanie metod w kontrolerach)
+  - [ ] Frontend do każdego widoku (napisanie template'ów w html.twig)
 # Krótki przewodnik po strukturze projektu
 - Controllery znajdują się pod ścieżką /src/Controller/ 
   - Każdy kontroler dotyczy jednego obrębu zagadnień (UserController dotyczy rzeczy związanych z kontem użytkownika itp, DzieloController   dotyczy rzeczy związanych z dziełami np wyświetlanie ich, dodawanie itp)
