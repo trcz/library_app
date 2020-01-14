@@ -25,9 +25,9 @@ Library management application for IT studies project
 # Aktualizacja repozytorium:
     - _**git pull upstream master**_ - aktualizuje nasze lokalne repozytorium o zmiany widoczne na githubie
 # Upload do repozytorium:
-  1. - _**git add -A**_
-  2. - _**git commit -m "Wiadomość dotycząca zmian"**_ - zmiany które chcemy wprowadzić z komentarzem dotyczącym co zrobiliśmy za zmiany w celu zidentyfikowania później lepiej zmian jak coś nie będzie działać
-  3. - _**git push**_ - aktualizujemy repozytorium na githubie
+  1. _**git add -A**_
+  2. _**git commit -m "Wiadomość dotycząca zmian"**_ - zmiany które chcemy wprowadzić z komentarzem dotyczącym co zrobiliśmy za zmiany w celu zidentyfikowania później lepiej zmian jak coś nie będzie działać
+  3. _**git push**_ - aktualizujemy repozytorium na githubie
   4. Sprawdzamy zmiany na githubie
   
  # Ważne linki:
