@@ -1,4 +1,4 @@
-# library_app
+# Library_app
 Library management application for IT studies project
 # Do zrobienia:
   - [ ] Poprawienie diagramu klas
