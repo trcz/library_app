@@ -2,6 +2,7 @@
 Library management application for IT studies project
 # Do zrobienia:
   - [ ] Poprawienie diagramu klas
+  - [ ] Usunięcie interfejsu z diagramu klas i wpisanie metod z tego interfejsu po prostu do każdej klasy która po nim dziedziczyła je
   - [ ] Poprawienie diagramu interfejsu i dodanie interfejsów (stron) dostępnych dla administratora (takie jak np. strona dodawania pokoju itp.)
   - [ ] Zaprojektowanie UI
   - [ ] Backend do każdego widoku (napisanie metod w kontrolerach)
