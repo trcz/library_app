@@ -10,4 +10,9 @@ Library management application for IT studies project
 # Najważniejsze informacje:
 - Każda metoda w kontrolerze musi posiadać:
   - Route - czyli ścieżka na której metoda zostaje wywoływana np. użytkownik wchodząc na www.test.pl/produkty ma mieć wyświetlone na ekranie wszystkie produkty sklepu, to nad naszą metoda powinno się znaleźć: ![Route](https://github.com/trcz/library_app/blob/master/route.PNG)
+  - template - każda metoda musi zwracać template czyli widok który wyświetli się użytkownikowi. w składni funkci render(), pierwszym argumentem jest ścieżka do naszego template'a, zaś drugim jest tablica zmiennych znajdująca się w nawiasach kwadratowych. Gdzie po lewej stronie mamy nazwę tej zmiennej DO UŻYCIA W TEMPLACIE, a po prawej nazwe zmiennej z danej metody. Przykładowo: ![Template](https://github.com/trcz/library_app/blob/master/template.PNG)
   
+  
+ # Ważne linki:
+   - [Symfony dokumentacja](https://symfony.com/doc/current/index.html#gsc.tab=0) - po lewej stronie mamy menu Getting started i tam wszystko jest ładnie opisane.
+   - [Moje repozytorium](https://github.com/YaggiDev/Symfony-4-Online-Store) - powinno Wam pomóc zaciągnąć jakieś wzorce.
