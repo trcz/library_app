@@ -24,7 +24,7 @@ Library management application for IT studies project
   
 # Aktualizacja lokalnego repozytorium:
      git pull upstream master - aktualizuje nasze lokalne repozytorium o zmiany widoczne na githubie
-  _:warning: Uwaga w przypadku kiedy wyskoczy komunikat o niepowodzeniu ściągnięcia, na początku powyższej komendy dodaj polecenie **sudo**_
+  :warning:_ Uwaga w przypadku kiedy wyskoczy komunikat o niepowodzeniu ściągnięcia, na początku powyższej komendy dodaj polecenie **sudo**_
   
 # Upload do repozytorium:
   1. Po zalogowaniu do ssh wpisujemy komendę _**cd /var/www/library_app**_
