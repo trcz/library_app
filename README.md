@@ -25,10 +25,11 @@ Library management application for IT studies project
 # Aktualizacja lokalnego repozytorium:
      git pull upstream master - aktualizuje nasze lokalne repozytorium o zmiany widoczne na githubie
 # Upload do repozytorium:
-  1. _**git add -A**_
-  2. _**git commit -m "Wiadomość dotycząca zmian"**_ - zmiany które chcemy wprowadzić z komentarzem dotyczącym co zrobiliśmy za zmiany w celu zidentyfikowania później lepiej zmian jak coś nie będzie działać
-  3. _**git push**_ - aktualizujemy repozytorium na githubie
-  4. Sprawdzamy zmiany na githubie
+  1. Po zalogowaniu do ssh wpisujemy komendę _**cd /var/www/library_app**_
+  2. _**git add -A**_
+  3. _**git commit -m "Wiadomość dotycząca zmian"**_ - zmiany które chcemy wprowadzić z komentarzem dotyczącym co zrobiliśmy za zmiany w celu zidentyfikowania później lepiej zmian jak coś nie będzie działać
+  4. _**git push**_ - aktualizujemy repozytorium na githubie
+  5. Sprawdzamy zmiany na githubie
   
  # Ważne linki:
    - [Symfony dokumentacja](https://symfony.com/doc/current/index.html#gsc.tab=0) - po lewej stronie mamy menu Getting started i tam wszystko jest ładnie opisane.
