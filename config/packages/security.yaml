@@ -16,9 +16,9 @@ security:
             security: false
         main:
             anonymous: lazy
-            #guard:
-             #   authenticators:
-              #      - App\Security\UzytkownikAuthenticator
+            guard:
+                authenticators:
+                    - App\Security\UzytkownikAuthenticator
             logout:
                 path: app_logout
                 target: /
