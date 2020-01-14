@@ -4,7 +4,7 @@ Library management application for IT studies project
   - [ ] Poprawienie diagramu klas
   - [ ] Usunięcie interfejsu z diagramu klas i wpisanie metod z tego interfejsu po prostu do każdej klasy która po nim dziedziczyła je
   - [ ] Poprawienie diagramu interfejsu i dodanie interfejsów (stron) dostępnych dla administratora (takie jak np. strona dodawania pokoju itp.)
-  - [ ] Zaprojektowanie UI
+  - [ ] Zaprojektowanie UI (proponuję zacząć od menu nawigacyjnego, które będzie na górze strony, może coś takiego [BootStrap navbar](https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=navbar-color-schemes))
   - [ ] Backend do każdego widoku (napisanie metod w kontrolerach)
   - [ ] Frontend do każdego widoku (napisanie template'ów w html.twig)
 # Krótki przewodnik po strukturze projektu
