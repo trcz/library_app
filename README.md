@@ -8,5 +8,6 @@ Library management application for IT studies project
   - Template jest to widok (zrobiony w takim lepszym HTML'u), który metoda kontrollera ma zwracać (renderować) po wykonaniu się. 
   
 # Najważniejsze informacje:
-- Każda metoda w kontrolerze musi posiadać
-  [] - 
+- Każda metoda w kontrolerze musi posiadać:
+  - Route - czyli ścieżka na której metoda zostaje wywoływana np. użytkownik wchodząc na www.test.pl/produkty ma mieć wyświetlone na ekranie wszystkie produkty sklepu, to nad naszą metoda powinno się znaleźć: [Route](https://github.com/trcz/library_app/blob/master/route.PNG)
+  
