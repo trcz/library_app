@@ -12,8 +12,11 @@ class DzieloController extends AbstractController
      */
     public function index()
     {
+        $rekordy = "qwerty";
         return $this->render('dzielo/index.html.twig', [
             'controller_name' => 'DzieloController',
+            'rekord' => $rekordy,
+            
         ]);
     }
 }
