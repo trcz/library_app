@@ -23,7 +23,7 @@ class DzieloController extends AbstractController
     /**
      * @Route("/mebel", name="mebel")
      */
-    public function index()
+    public function mebel_show()
     {
         $meble = $this->getDoctrine()->getRepository(mebel::class)->findall();
         
