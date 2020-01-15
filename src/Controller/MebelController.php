@@ -1,5 +1,6 @@
 <?php
 namespace App\Controller;
+use App\Entity\Mebel;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 class DzieloController extends AbstractController
