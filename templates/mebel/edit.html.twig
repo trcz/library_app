@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Mebel{% endblock %}
+
+{% block body %}
+    <h1>Edit Mebel</h1>
+
+    {{ include('mebel/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('mebel_index') }}">back to list</a>
+
+    {{ include('mebel/_delete_form.html.twig') }}
+{% endblock %}
