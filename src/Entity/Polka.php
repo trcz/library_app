@@ -77,5 +77,10 @@ class Polka
         $this->mebel_id = $mebel_id;
     }
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
 
 }

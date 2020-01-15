@@ -69,5 +69,17 @@ class Mebel
         return $this->pokoj_id;
     }
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function setPokojId(?Pokoj $pokoj_id): self
+    {
+        $this->pokoj_id = $pokoj_id;
+
+        return $this;
+    }
+
 
 }

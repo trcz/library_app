@@ -55,4 +55,9 @@ class Autor
         $this->nazwisko = $nazwisko;
     }
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
 }

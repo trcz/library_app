@@ -34,4 +34,9 @@ class Pokoj
         $this->nazwa = $nazwa;
     }
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
 }

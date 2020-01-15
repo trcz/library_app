@@ -287,5 +287,10 @@ class Dzielo
         $this->polka_id = $polka_id;
     }
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
 
 }

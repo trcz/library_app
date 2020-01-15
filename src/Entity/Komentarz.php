@@ -78,5 +78,10 @@ class Komentarz
         $this->tresc = $tresc;
     }
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
 
 }

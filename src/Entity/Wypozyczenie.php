@@ -67,4 +67,33 @@ class Wypozyczenie
         $this->data_wypozyczenia = $data_wypozyczenia;
     }
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getDzieloId(): ?Dzielo
+    {
+        return $this->dzielo_id;
+    }
+
+    public function setDzieloId(?Dzielo $dzielo_id): self
+    {
+        $this->dzielo_id = $dzielo_id;
+
+        return $this;
+    }
+
+    public function getUzytkownikId(): ?Uzytkownik
+    {
+        return $this->uzytkownik_id;
+    }
+
+    public function setUzytkownikId(?Uzytkownik $uzytkownik_id): self
+    {
+        $this->uzytkownik_id = $uzytkownik_id;
+
+        return $this;
+    }
+
 }
