@@ -7,12 +7,14 @@ use App\Entity\Mebel;
 use App\Entity\Pokoj;
 use App\Entity\Polka;
 use App\Entity\Uzytkownik;
+use App\Form\DzieloFormType;
 use mysql_xdevapi\Exception as d;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException\Exception;
+use Symfony\Component\Form\Extension\Core\Type\FormType;
 
 class DzieloController extends AbstractController
 {
@@ -43,7 +45,20 @@ class DzieloController extends AbstractController
         ]);
     }
 
-    
+    /**
+     * @Route("/dodajdzielo", name="dodaj_dzielo")
+     */
+    public function addDzielo()
+    {
+        $form = $this->createBuilder(DzieloFormType::class);
+
+        return $this->render('admin/index.html.twig', [
+        'dzieloForm' => $form->createView(),
+
+        ]);
+    }
+
+
     /**
      * @Route("/polka", name="polka")
      */
