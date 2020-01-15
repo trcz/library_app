@@ -72,4 +72,17 @@ class DzieloController extends AbstractController
         ]);
     }
     
+    /**
+     * @Route("/uzytkownik", name="uzytkownik")
+     */
+    public function index()
+    {
+        $uzytkownicy = $this->getDoctrine()->getRepository(uzytkownik::class)->findall();
+        
+        return $this->render('uzytkownik/index.html.twig', [
+            'uzytkownicy' => $uzytkownicy,
+            
+        ]);
+    }
+    
 }
