@@ -1,7 +1,12 @@
 <?php
 
 namespace App\Controller;
+use App\Entity\Autor;
 use App\Entity\Dzielo;
+use App\Entity\Mebel;
+use App\Entity\Pokoj;
+use App\Entity\Polka;
+use App\Entity\Uzytkownik;
 use mysql_xdevapi\Exception as d;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,12 +22,12 @@ class DzieloController extends AbstractController
      */
     public function mebel_show()
     {
-        $meble = $this->getDoctrine()->getRepository(mebel::class)->findall();
-        
+        $meble = $this->getDoctrine()->getRepository(Mebel::class)->findall();
         return $this->render('mebel/index.html.twig', [
             'meble' => $meble,
             
         ]);
+
     }
     
     /**
@@ -44,7 +49,7 @@ class DzieloController extends AbstractController
      */
     public function polka_show()
     {
-        $polki = $this->getDoctrine()->getRepository(polka::class)->findall();
+        $polki = $this->getDoctrine()->getRepository(Polka::class)->findall();
         
         return $this->render('polka/index.html.twig', [
             'polki' => $polki,
@@ -57,7 +62,7 @@ class DzieloController extends AbstractController
      */
     public function pokoj_show()
     {
-        $pokoje = $this->getDoctrine()->getRepository(pokoj::class)->findall();
+        $pokoje = $this->getDoctrine()->getRepository(Pokoj::class)->findall();
         
         return $this->render('pokoj/index.html.twig', [
             'pokoje' => $pokoje,
@@ -70,7 +75,7 @@ class DzieloController extends AbstractController
      */
     public function autor_show()
     {
-        $autorzy = $this->getDoctrine()->getRepository(autor::class)->findall();
+        $autorzy = $this->getDoctrine()->getRepository(Autor::class)->findall();
         
         return $this->render('autor/index.html.twig', [
             'autorzy' => $autorzy,
@@ -83,7 +88,7 @@ class DzieloController extends AbstractController
      */
     public function uzytkownik_show()
     {
-        $uzytkownicy = $this->getDoctrine()->getRepository(uzytkownik::class)->findall();
+        $uzytkownicy = $this->getDoctrine()->getRepository(Uzytkownik::class)->findall();
         
         return $this->render('uzytkownik/index.html.twig', [
             'uzytkownicy' => $uzytkownicy,
