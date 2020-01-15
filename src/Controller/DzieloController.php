@@ -11,19 +11,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException\Exception;
 
 class DzieloController extends AbstractController
 {
-    /**
-     * @Route("/", name="main")
-     */
-    public function index()
-    {
-        $dziela = $this->getDoctrine()->getRepository(Dzielo::class)->findAll();
         
-        return $this->render('dzielo/index.html.twig', [
-            'dziela' => $dziela,
-            
-        ]);
-    }
-    
     /**
      * @Route("/mebel", name="mebel")
      */
@@ -36,6 +24,20 @@ class DzieloController extends AbstractController
             
         ]);
     }
+    
+    /**
+     * @Route("/", name="main")
+     */
+    public function index()
+    {
+        $dziela = $this->getDoctrine()->getRepository(Dzielo::class)->findAll();
+        
+        return $this->render('dzielo/index.html.twig', [
+            'dziela' => $dziela,
+            
+        ]);
+    }
+
     
     /**
      * @Route("/polka", name="polka")
