@@ -36,7 +36,7 @@ class DzieloController extends AbstractController
     /**
      * @Route("/polka", name="polka")
      */
-    public function index()
+    public function polka_show()
     {
         $polki = $this->getDoctrine()->getRepository(polka::class)->findall();
         
@@ -49,7 +49,7 @@ class DzieloController extends AbstractController
     /**
      * @Route("/pokoj", name="pokoj")
      */
-    public function index()
+    public function pokoj_show()
     {
         $pokoje = $this->getDoctrine()->getRepository(pokoj::class)->findall();
         
@@ -62,7 +62,7 @@ class DzieloController extends AbstractController
     /**
      * @Route("/autor", name="autor")
      */
-    public function index()
+    public function autor_show()
     {
         $autorzy = $this->getDoctrine()->getRepository(autor::class)->findall();
         
@@ -75,7 +75,7 @@ class DzieloController extends AbstractController
     /**
      * @Route("/uzytkownik", name="uzytkownik")
      */
-    public function index()
+    public function uzytkownik_show()
     {
         $uzytkownicy = $this->getDoctrine()->getRepository(uzytkownik::class)->findall();
         
