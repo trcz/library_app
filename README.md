@@ -1,4 +1,4 @@
-# library_app
+# Library app
 Library management application for IT studies project
 # Do zrobienia:
   - [ ] Poprawienie diagramu klas
@@ -24,6 +24,8 @@ Library management application for IT studies project
   
 # Aktualizacja lokalnego repozytorium:
      git pull upstream master - aktualizuje nasze lokalne repozytorium o zmiany widoczne na githubie
+   :warning:_Uwaga w przypadku kiedy wyskoczy komunikat o niepowodzeniu ściągnięcia, na początku powyższej komendy dodaj polecenie **sudo**_
+  
 # Upload do repozytorium:
   1. Po zalogowaniu do ssh wpisujemy komendę _**cd /var/www/library_app**_
   2. _**git add -A**_
