@@ -16,7 +16,7 @@ class DzieloController extends AbstractController
      */
     public function index()
     {
-        $dziela = $this->getDoctrine()->getRepository(dzielo::class)->findAll();
+        $dziela = $this->getDoctrine()->getRepository(Dzielo::class)->findAll();
         
         return $this->render('dzielo/index.html.twig', [
             'dziela' => $dziela,
