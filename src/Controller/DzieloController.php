@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controller;
-use App\Entity\dzielo;
+use App\Entity\Dzielo;
 use mysql_xdevapi\Exception as d;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
