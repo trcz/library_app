@@ -19,4 +19,57 @@ class DzieloController extends AbstractController
             
         ]);
     }
+    
+    /**
+     * @Route("/mebel", name="mebel")
+     */
+    public function index()
+    {
+        $meble = $this->getDoctrine()->getRepository(mebel::class)->findall();
+        
+        return $this->render('mebel/index.html.twig', [
+            'meble' => $meble,
+            
+        ]);
+    }
+    
+    /**
+     * @Route("/polka", name="polka")
+     */
+    public function index()
+    {
+        $polki = $this->getDoctrine()->getRepository(polka::class)->findall();
+        
+        return $this->render('polka/index.html.twig', [
+            'polki' => $polki,
+            
+        ]);
+    }
+    
+    /**
+     * @Route("/pokoj", name="pokoj")
+     */
+    public function index()
+    {
+        $pokoje = $this->getDoctrine()->getRepository(pokoj::class)->findall();
+        
+        return $this->render('pokoj/index.html.twig', [
+            'pokoje' => $pokoje,
+            
+        ]);
+    }
+    
+    /**
+     * @Route("/autor", name="autor")
+     */
+    public function index()
+    {
+        $autorzy = $this->getDoctrine()->getRepository(autor::class)->findall();
+        
+        return $this->render('autor/index.html.twig', [
+            'autorzy' => $autorzy,
+            
+        ]);
+    }
+    
 }
