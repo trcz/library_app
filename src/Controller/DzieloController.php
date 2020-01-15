@@ -23,7 +23,7 @@ class DzieloController extends AbstractController
     public function mebel_show()
     {
         $meble = $this->getDoctrine()->getRepository(Mebel::class)->findall();
-        return $this->render('mebel/index.html.twig', [
+        return $this->render('admin/mebel.html.twig', [
             'meble' => $meble,
             
         ]);
@@ -37,7 +37,7 @@ class DzieloController extends AbstractController
     {
         $dziela = $this->getDoctrine()->getRepository(Dzielo::class)->findAll();
         
-        return $this->render('dzielo/index.html.twig', [
+        return $this->render('admin/index.html.twig', [
             'dziela' => $dziela,
             
         ]);
@@ -51,7 +51,7 @@ class DzieloController extends AbstractController
     {
         $polki = $this->getDoctrine()->getRepository(Polka::class)->findall();
         
-        return $this->render('polka/index.html.twig', [
+        return $this->render('admin/polka.html.twig', [
             'polki' => $polki,
             
         ]);
@@ -64,7 +64,7 @@ class DzieloController extends AbstractController
     {
         $pokoje = $this->getDoctrine()->getRepository(Pokoj::class)->findall();
         
-        return $this->render('pokoj/index.html.twig', [
+        return $this->render('admin/pokoj.html.twig', [
             'pokoje' => $pokoje,
             
         ]);
@@ -77,7 +77,7 @@ class DzieloController extends AbstractController
     {
         $autorzy = $this->getDoctrine()->getRepository(Autor::class)->findall();
         
-        return $this->render('autor/index.html.twig', [
+        return $this->render('admin/autor.html.twig', [
             'autorzy' => $autorzy,
             
         ]);
@@ -90,7 +90,7 @@ class DzieloController extends AbstractController
     {
         $uzytkownicy = $this->getDoctrine()->getRepository(Uzytkownik::class)->findall();
         
-        return $this->render('uzytkownik/index.html.twig', [
+        return $this->render('admin/uzytkownik.html.twig', [
             'uzytkownicy' => $uzytkownicy,
             
         ]);
