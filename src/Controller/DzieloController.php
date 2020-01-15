@@ -20,7 +20,7 @@ class DzieloController extends AbstractController
 {
         
     /**
-     * @Route("/mebel", name="mebel")
+     * @Route("/mebelx", name="mebel")
      */
     public function mebel_show()
     {
