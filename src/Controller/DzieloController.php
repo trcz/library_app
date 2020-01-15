@@ -8,14 +8,14 @@ use Symfony\Component\Routing\Annotation\Route;
 class DzieloController extends AbstractController
 {
     /**
-     * @Route("/produkty", name="produkty")
+     * @Route("/", name="main")
      */
     public function index()
     {
-        $rekordy = "qwerty";
+        $dziela = $this->getDoctrine()->getRepository(dzielo::class)->findall();
+        
         return $this->render('dzielo/index.html.twig', [
-            'controller_name' => 'DzieloController',
-            'rekord' => $rekordy,
+            'dziela' => $dziela,
             
         ]);
     }
