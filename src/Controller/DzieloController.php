@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controller;
-use App\Entity\Dzielo;
+use App\Entity\dzielo;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
