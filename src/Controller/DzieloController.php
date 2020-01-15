@@ -19,4 +19,17 @@ class DzieloController extends AbstractController
             
         ]);
     }
+     /**
+     * @Route("/asd", name="asd")
+     */
+    public function index()
+    {
+        $dziela = $this->getDoctrine()->getRepository(dzielo::class)->findall();
+        
+        return $this->render('dzielo/index.html.twig', [
+            'dziela' => $dziela,
+            
+        ]);
+    }
+    
 }
