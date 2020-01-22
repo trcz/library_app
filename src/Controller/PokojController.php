@@ -26,7 +26,7 @@ class PokojController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="pokoj_new", methods={"GET","POST"})
+     * @Route("/new_pokoj", name="pokoj_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -49,7 +49,7 @@ class PokojController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="pokoj_show", methods={"GET"})
+     * @Route("/pokoj/{id}", name="pokoj_show", methods={"GET"})
      */
     public function show(Pokoj $pokoj): Response
     {
@@ -59,7 +59,7 @@ class PokojController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="pokoj_edit", methods={"GET","POST"})
+     * @Route("/pokoj/{id}/edit", name="pokoj_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Pokoj $pokoj): Response
     {
@@ -79,7 +79,7 @@ class PokojController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="pokoj_delete", methods={"DELETE"})
+     * @Route("/pokoj/{id}", name="pokoj_delete", methods={"DELETE"})
      */
     public function delete(Request $request, Pokoj $pokoj): Response
     {
