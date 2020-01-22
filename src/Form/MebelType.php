@@ -12,8 +12,7 @@ class MebelType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('ilosc_polek'
-            )
+            ->add('ilosc_polek')
             ->add('nazwa')
             ->add('pokoj_id')
         ;
