@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Polka{% endblock %}
+
+{% block body %}
+    <h1>Polka</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ polka.id }}</td>
+            </tr>
+            <tr>
+                <th>Czy_pelna</th>
+                <td>{{ polka.czyPelna ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Numer</th>
+                <td>{{ polka.numer }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('polka_index') }}">back to list</a>
+
+    <a href="{{ path('polka_edit', {'id': polka.id}) }}">edit</a>
+
+    {{ include('polka/_delete_form.html.twig') }}
+{% endblock %}

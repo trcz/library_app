@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Polka index{% endblock %}
+
+{% block body %}
+    <h1>Polka index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Czy_pelna</th>
+                <th>Numer</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for polka in polkas %}
+            <tr>
+                <td>{{ polka.id }}</td>
+                <td>{{ polka.czyPelna ? 'Yes' : 'No' }}</td>
+                <td>{{ polka.numer }}</td>
+                <td>
+                    <a href="{{ path('polka_show', {'id': polka.id}) }}">show</a>
+                    <a href="{{ path('polka_edit', {'id': polka.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('polka_new') }}">Create new</a>
+{% endblock %}
