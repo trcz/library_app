@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Pokoj{% endblock %}
+
+{% block body %}
+    <h1>Edit Pokoj</h1>
+
+    {{ include('pokoj/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('pokoj_index') }}">back to list</a>
+
+    {{ include('pokoj/_delete_form.html.twig') }}
+{% endblock %}

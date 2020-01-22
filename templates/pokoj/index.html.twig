@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pokoj index{% endblock %}
+
+{% block body %}
+    <h1>Pokoj index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nazwa</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for pokoj in pokojs %}
+            <tr>
+                <td>{{ pokoj.id }}</td>
+                <td>{{ pokoj.nazwa }}</td>
+                <td>
+                    <a href="{{ path('pokoj_show', {'id': pokoj.id}) }}">show</a>
+                    <a href="{{ path('pokoj_edit', {'id': pokoj.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('pokoj_new') }}">Create new</a>
+{% endblock %}

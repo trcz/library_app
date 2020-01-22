@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Pokoj{% endblock %}
+
+{% block body %}
+    <h1>Create new Pokoj</h1>
+
+    {{ include('pokoj/_form.html.twig') }}
+
+    <a href="{{ path('pokoj_index') }}">back to list</a>
+{% endblock %}
