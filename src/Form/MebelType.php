@@ -16,7 +16,7 @@ class MebelType extends AbstractType
             'constraints' => [
                 new NotBlank(),
                 'min' => 1,
-            ],)
+            ])
             ->add('nazwa')
             ->add('pokoj_id')
         ;
