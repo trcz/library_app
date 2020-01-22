@@ -60,7 +60,7 @@ class DzieloController extends AbstractController
 
 
     /**
-     * @Route("/polka", name="polka")
+     * @Route("/polkax", name="polka")
      */
     public function polka_show()
     {
@@ -73,7 +73,7 @@ class DzieloController extends AbstractController
     }
     
     /**
-     * @Route("/pokoj", name="pokoj")
+     * @Route("/pokojx", name="pokoj")
      */
     public function pokoj_show()
     {
@@ -86,7 +86,7 @@ class DzieloController extends AbstractController
     }
     
     /**
-     * @Route("/autor", name="autor")
+     * @Route("/autorx", name="autor")
      */
     public function autor_show()
     {
