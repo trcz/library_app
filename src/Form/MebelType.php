@@ -12,10 +12,10 @@ class MebelType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('ilosc_polek',[
+            ->add('ilosc_polek',
             'attr' => [
                 'min' => 1,
-            ],])
+            ])
             ->add('nazwa')
             ->add('pokoj_id')
         ;
