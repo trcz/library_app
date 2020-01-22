@@ -13,7 +13,7 @@ class MebelType extends AbstractType
     {
         $builder
             ->add('ilosc_polek',[
-            'constraints' => [
+            'attr' => [
                 'min' => 1,
             ],])
             ->add('nazwa')
