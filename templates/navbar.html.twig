@@ -43,10 +43,10 @@
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 						{% if app.user.username is defined %}
-						<a class="dropdown-item" href="{{ path('logout') }}">Wyloguj</a>
+						<a class="dropdown-item" href="{{ path('app_logout') }}">Wyloguj</a>
 						{% else %}
-						<a class="dropdown-item" href="{{ path('login') }}">Zaloguj</a>
-						<a class="dropdown-item" href="{{ path('register') }}">Zarejestruj</a>
+						<a class="dropdown-item" href="{{ path('app_login') }}">Zaloguj</a>
+						<a class="dropdown-item" href="{{ path('app_register') }}">Zarejestruj</a>
 						{% endif %}
 					</div>
 				</li>
