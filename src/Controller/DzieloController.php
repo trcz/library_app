@@ -110,8 +110,8 @@ class DzieloController extends AbstractController
 
         $em = $this->getDoctrine()->getManager();
         $query = $em->createQuery(
-            'SELECT p FROM App\Entity\Dzielo p
-    WHERE p.tytul LIKE :data')
+            'SELECT * FROM App\Entity\Dzielo 
+    WHERE Dzielo.tytul LIKE :data')
             ->setParameter('data',$data);
 
 
