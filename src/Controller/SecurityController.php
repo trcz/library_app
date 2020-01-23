@@ -43,7 +43,7 @@ class SecurityController extends AbstractController
     public function Search($dzielo)
     {
         $phrase = strtolower($dzielo);
-        $dziela = $this->getDoctrine()->getRepository(Dzielo::class)->findBy(['Tytul'=>$phrase]);
+        $dziela = $this->getDoctrine()->getRepository(Dzielo::class)->findBy(['tytul'=>$phrase]);
         return $this->render('dzielo/index.html.twig',[
             'dziela' => $dziela,
 
