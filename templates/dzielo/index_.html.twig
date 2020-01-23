@@ -7,11 +7,11 @@
     <table class="dzielo_table">
         <thead>
         <tr>
-            <td>Rodzaj dokumentu</td>
-            <td>Tytuł</td>
-            <td>Zdjęcie</td>
-            <td>Autor</td>
-            <td></td>
+            <th>Rodzaj dokumentu</th>
+            <th>Tytuł</th>
+            <th>Zdjęcie</th>
+            <th>Autor</th>
+            <th></th>
         </tr>
         </thead>
         {% for dzielo in dziela %}
@@ -19,6 +19,8 @@
             <tr>
                 <td>{{ dzielo.rodzajdokumentu }}</td>
                 <td>{{ dzielo.tytul }}</td>
+                <td>...</td>
+                <td></td>
             </tr>
             </tbody>
 
