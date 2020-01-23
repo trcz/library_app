@@ -97,7 +97,9 @@ class DzieloController extends AbstractController
     public function Search($dzielo)
     {
         $phrase = strtolower($dzielo);
+        $phrase = '%'+$phrase+'%';
         $dziela = $this->getDoctrine()->getRepository(Dzielo::class)->findBy(['tytul'=>$phrase]);
+
         return $this->render('dzielo/index_.html.twig',[
             'dziela' => $dziela,
 
