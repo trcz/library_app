@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException\Exception;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 
-class DzieloController extends AbstractController
+class DzieloControllerx extends AbstractController
 {
         
     /**
