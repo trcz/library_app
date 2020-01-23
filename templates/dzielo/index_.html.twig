@@ -1,11 +1,26 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello DzieloController!{% endblock %}
+{% block title %}Szukaj{% endblock %}
 
 {% block body %}
     {% set i = 0 %}
     <table class="dzielo_table">
+        <thead>
+        <tr>
+            <td>Rodzaj dokumentu</td>
+            <td>Tytuł</td>
+            <td>Zdjęcie</td>
+            <td>Autor</td>
+            <td></td>
+        </tr>
+        </thead>
         {% for dzielo in dziela %}
+            <tbody>
+            <tr>
+                <td>{{ dzielo.rodzaj_dokumntu }}</td>
+                <td>{{ dzielo.tytul }}</td>
+            </tr>
+            </tbody>
             {{dzielo.tytul}}
 
         {% endfor %}
