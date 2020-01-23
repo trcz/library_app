@@ -37,17 +37,4 @@ class SecurityController extends AbstractController
         throw new \Exception('This method can be blank - it will be intercepted by the logout key on your firewall');
     }
 
-    /**
-     * @Route("/szukaj/{dzielo}", name="search")
-     */
-    public function Search($dzielo)
-    {
-        $phrase = strtolower($dzielo);
-        $dziela = $this->getDoctrine()->getRepository(Dzielo::class)->findBy(['tytul'=>$phrase]);
-        return $this->render('dzielo/index_.html.twig',[
-            'dziela' => $dziela,
-
-        ]);
-
-    }
 }
