@@ -94,7 +94,7 @@ class DzieloController extends AbstractController
         return $this->redirectToRoute('dzielo_index');
     }
     /**
-     * @Route("/szukaj/{dzielo}", name="search")
+     * @Route("/szukaj", name="search")
      */
     public function Search($dzielo)
     {
