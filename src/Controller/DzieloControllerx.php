@@ -39,7 +39,7 @@ class DzieloControllerx extends AbstractController
     {
         $dziela = $this->getDoctrine()->getRepository(Dzielo::class)->findAll();
         
-        return $this->render('admin/index_.html.twig', [
+        return $this->render('admin/index.html.twig', [
             'dziela' => $dziela,
             
         ]);
@@ -52,7 +52,7 @@ class DzieloControllerx extends AbstractController
     {
         $form = $this->createBuilder(DzieloFormType::class);
 
-        return $this->render('admin/index_.html.twig', [
+        return $this->render('admin/index.html.twig', [
         'dzieloForm' => $form->createView(),
 
         ]);

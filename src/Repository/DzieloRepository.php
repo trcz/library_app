@@ -18,7 +18,10 @@ class DzieloRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Dzielo::class);
     }
-
+    public function ifContains($phrase)
+    {
+        return $this->_em->createQuery("SELECT * FROM 'App\Repository\DzieloRepository u WHERE u LIKE '%u%");
+    }
     // /**
     //  * @return Dzielo[] Returns an array of Dzielo objects
     //  */
