@@ -98,12 +98,26 @@ class DzieloController extends AbstractController
      */
     public function Search($dzielo)
     {
-        $phrase = strtolower($dzielo);
+        /*$phrase = strtolower($dzielo);
         $dziela = $this->getDoctrine()->getRepository(Dzielo::class)->findBy(['tytul'=>$phrase]);
         return $this->render('dzielo/index_.html.twig',[
             'dziela' => $dziela,
 
-        ]);
+        ]);*/
+        $request = $this->getRequest();
+        $data = $request->request->get('search');
 
+
+        $em = $this->getDoctrine()->getManager();
+        $query = $em->createQuery(
+            'SELECT p FROM App\Entity\Dzielo p
+    WHERE p.tytul LIKE :data')
+            ->setParameter('data',$data);
+
+
+        $dziela = $query->getResult();
+        return $this->render('dzielo/index_.html.twig',[
+            'dziela' => $dziela,
+        ]);
     }
 }
