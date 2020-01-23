@@ -44,7 +44,7 @@ class SecurityController extends AbstractController
     {
         $phrase = strtolower($dzielo);
         $dziela = $this->getDoctrine()->getRepository(Dzielo::class)->findBy(['tytul'=>$phrase]);
-        return $this->render('dzielo/index.html.twig',[
+        return $this->render('dzielo/index_.html.twig',[
             'dziela' => $dziela,
 
         ]);

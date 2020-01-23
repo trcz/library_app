@@ -20,7 +20,7 @@ class PolkaController extends AbstractController
      */
     public function index(PolkaRepository $polkaRepository): Response
     {
-        return $this->render('polka/index.html.twig', [
+        return $this->render('polka/index_.html.twig', [
             'polkas' => $polkaRepository->findAll(),
         ]);
     }
