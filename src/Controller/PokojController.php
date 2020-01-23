@@ -20,7 +20,7 @@ class PokojController extends AbstractController
      */
     public function index(PokojRepository $pokojRepository): Response
     {
-        return $this->render('pokoj/index_.html.twig', [
+        return $this->render('pokoj/index.html.twig', [
             'pokojs' => $pokojRepository->findAll(),
         ]);
     }

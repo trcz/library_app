@@ -20,7 +20,7 @@ class MebelController extends AbstractController
      */
     public function index(MebelRepository $mebelRepository): Response
     {
-        return $this->render('mebel/index_.html.twig', [
+        return $this->render('mebel/index.html.twig', [
             'mebels' => $mebelRepository->findAll(),
         ]);
     }
