@@ -36,5 +36,12 @@ class SecurityController extends AbstractController
     {
         throw new \Exception('This method can be blank - it will be intercepted by the logout key on your firewall');
     }
+    /**
+     * @Route("/strona_glowna",name="main_page")
+     */
+    public function Main()
+    {
+        return $this->render('index.html.twig');
+    }
 
 }
