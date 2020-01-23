@@ -25,7 +25,7 @@ class DzieloController extends AbstractController
         $data = "Dziady";
         $em = $this->getDoctrine()->getManager();
         $query = $em->createQuery(
-            'SELECT p a.nazwisko FROM App\Entity\Dzielo p LEFT JOIN p.autor_dzielo a JOIN a.autor
+            'SELECT p a.nazwisko FROM App\Entity\Dzielo p LEFT JOIN p.autor_dzielo a
     WHERE p.tytul LIKE :data')
             ->setParameter('data','%'.$data.'%');
 
