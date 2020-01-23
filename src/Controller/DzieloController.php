@@ -96,7 +96,7 @@ class DzieloController extends AbstractController
     /**
      * @Route("/szukaj", name="search")
      */
-    public function Search()
+    public function Search(Request $request)
     {
         /*$phrase = strtolower($dzielo);
         $dziela = $this->getDoctrine()->getRepository(Dzielo::class)->findBy(['tytul'=>$phrase]);
