@@ -91,4 +91,17 @@ class DzieloController extends AbstractController
 
         return $this->redirectToRoute('dzielo_index');
     }
+    /**
+     * @Route("/szukaj/{dzielo}", name="search")
+     */
+    public function Search($dzielo)
+    {
+        $phrase = strtolower($dzielo);
+        $dziela = $this->getDoctrine()->getRepository(Dzielo::class)->findBy(['tytul'=>$phrase]);
+        return $this->render('dzielo/index_.html.twig',[
+            'dziela' => $dziela,
+
+        ]);
+
+    }
 }
