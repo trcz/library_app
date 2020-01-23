@@ -7,7 +7,7 @@ use App\Entity\Dzielo;
 use App\Form\DzieloType;
 use App\Repository\DzieloRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Request as RQ;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -96,7 +96,7 @@ class DzieloController extends AbstractController
     /**
      * @Route("/szukaj", name="search")
      */
-    public function Search(Request $request)
+    public function Search(RQ $request)
     {
         /*$phrase = strtolower($dzielo);
         $dziela = $this->getDoctrine()->getRepository(Dzielo::class)->findBy(['tytul'=>$phrase]);
