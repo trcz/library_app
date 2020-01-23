@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dzielo{% endblock %}
+
+{% block body %}
+    <h1>Dzielo</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ dzielo.id }}</td>
+            </tr>
+            <tr>
+                <th>Tytul</th>
+                <td>{{ dzielo.tytul }}</td>
+            </tr>
+            <tr>
+                <th>Kod_jezyka</th>
+                <td>{{ dzielo.kodJezyka }}</td>
+            </tr>
+            <tr>
+                <th>Rodzaj_dokumntu</th>
+                <td>{{ dzielo.rodzajDokumntu }}</td>
+            </tr>
+            <tr>
+                <th>Kod_dziala</th>
+                <td>{{ dzielo.kodDziala }}</td>
+            </tr>
+            <tr>
+                <th>Polozenie_pierwotne</th>
+                <td>{{ dzielo.polozeniePierwotne }}</td>
+            </tr>
+            <tr>
+                <th>Polozenie_aktualne</th>
+                <td>{{ dzielo.polozenieAktualne }}</td>
+            </tr>
+            <tr>
+                <th>Zdjecie</th>
+                <td>{{ dzielo.zdjecie }}</td>
+            </tr>
+            <tr>
+                <th>Czy_wypozyczone</th>
+                <td>{{ dzielo.czyWypozyczone ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Data_dodania</th>
+                <td>{{ dzielo.dataDodania ? dzielo.dataDodania|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Data_usuniecia</th>
+                <td>{{ dzielo.dataUsuniecia ? dzielo.dataUsuniecia|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Czy_prywatne</th>
+                <td>{{ dzielo.czyPrywatne ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Czy_dla_doroslych</th>
+                <td>{{ dzielo.czyDlaDoroslych ? 'Yes' : 'No' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('dzielo_index') }}">back to list</a>
+
+    <a href="{{ path('dzielo_edit', {'id': dzielo.id}) }}">edit</a>
+
+    {{ include('dzielo/_delete_form.html.twig') }}
+{% endblock %}
