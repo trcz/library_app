@@ -22,8 +22,21 @@ class DzieloController extends AbstractController
      */
     public function index(DzieloRepository $dzieloRepository): Response
     {
+        $data = "Dziady";
+        $em = $this->getDoctrine()->getManager();
+        $query = $em->createQuery(
+            'SELECT p a.nazwisko FROM App\Entity\Dzielo p LEFT JOIN p.autor_dzielo a JOIN a.autor
+    WHERE p.tytul LIKE :data')
+            ->setParameter('data','%'.$data.'%');
+
+
+        $dziela = $query->getResult();
+
+
         return $this->render('dzielo/index.html.twig', [
             'dzielos' => $dzieloRepository->findAll(),
+            'autor' => $dziela,
+
         ]);
     }
 
