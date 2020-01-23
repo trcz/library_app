@@ -98,12 +98,6 @@ class DzieloController extends AbstractController
      */
     public function Search(Request $request)
     {
-        /*$phrase = strtolower($dzielo);
-        $dziela = $this->getDoctrine()->getRepository(Dzielo::class)->findBy(['tytul'=>$phrase]);
-        return $this->render('dzielo/index_.html.twig',[
-            'dziela' => $dziela,
-
-        ]);*/
 
         $data = $request->request->get('search');
 
