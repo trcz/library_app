@@ -22,8 +22,21 @@ class DzieloController extends AbstractController
      */
     public function index(DzieloRepository $dzieloRepository): Response
     {
+        $data = "Dziady";
+        $em = $this->getDoctrine()->getManager();
+        $query = $em->createQuery(
+            'SELECT p, a.nazwisko FROM App\Entity\Autor_Dzielo p LEFT JOIN p.autor_id a
+    ')
+            ->setParameter('data','%'.$data.'%');
+
+
+        $dziela = $query->getResult();
+
+
         return $this->render('dzielo/index.html.twig', [
             'dzielos' => $dzieloRepository->findAll(),
+            'autor' => $dziela,
+
         ]);
     }
 
@@ -94,16 +107,24 @@ class DzieloController extends AbstractController
         return $this->redirectToRoute('dzielo_index');
     }
     /**
-     * @Route("/szukaj/{dzielo}", name="search")
+     * @Route("/szukaj", name="search")
      */
-    public function Search($dzielo)
+    public function Search(Request $request)
     {
-        $phrase = strtolower($dzielo);
-        $dziela = $this->getDoctrine()->getRepository(Dzielo::class)->findBy(['tytul'=>$phrase]);
+
+        $data = $request->request->get('search');
+
+
+        $em = $this->getDoctrine()->getManager();
+        $query = $em->createQuery(
+            'SELECT p FROM App\Entity\Dzielo p
+    WHERE p.tytul LIKE :data')
+            ->setParameter('data','%'.$data.'%');
+
+
+        $dziela = $query->getResult();
         return $this->render('dzielo/index_.html.twig',[
             'dziela' => $dziela,
-
         ]);
-
     }
 }

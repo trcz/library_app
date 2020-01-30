@@ -4,7 +4,7 @@
 
 {% block body %}
     <h1>Dzielo index</h1>
-
+    {{ autor.nazwisko }}
     <table class="table">
         <thead>
             <tr>
@@ -30,7 +30,7 @@
                 <td>{{ dzielo.id }}</td>
                 <td>{{ dzielo.tytul }}</td>
                 <td>{{ dzielo.kodJezyka }}</td>
-                <td>{{ dzielo.rodzajDokumntu }}</td>
+                <td>{{ dzielo.rodzajDokumentu }}</td>
                 <td>{{ dzielo.kodDziala }}</td>
                 <td>{{ dzielo.polozeniePierwotne }}</td>
                 <td>{{ dzielo.polozenieAktualne }}</td>

@@ -26,7 +26,7 @@ class Dzielo
 	/**
      * @ORM\Column(type="string", length=60)
      */
-    private $rodzaj_dokumntu;
+    private $rodzaj_dokumentu;
 	
 	/**
      * @ORM\Column(type="string", length=13)
@@ -114,17 +114,17 @@ class Dzielo
     /**
      * @return mixed
      */
-    public function getRodzajDokumntu()
+    public function getRodzajDokumentu()
     {
-        return $this->rodzaj_dokumntu;
+        return $this->rodzaj_dokumentu;
     }
 
     /**
      * @param mixed $rodzaj_dokumntu
      */
-    public function setRodzajDokumntu($rodzaj_dokumntu)
+    public function setRodzajDokumentu($rodzaj_dokumentu)
     {
-        $this->rodzaj_dokumntu = $rodzaj_dokumntu;
+        $this->rodzaj_dokumentu = $rodzaj_dokumentu;
     }
 
     /**
