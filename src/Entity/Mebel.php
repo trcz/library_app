@@ -84,9 +84,9 @@ class Mebel
     {
         return $this->nazwa;
     }
-    public function getPokoj($pokoj_id)
+    public function getPokoj()
     {
-        $autor = $this->getDoctrine()->getRepository(Autor::class)->findOneByPokoj_idJoinedid($pokoj_id);
+        $autor = $this->getDoctrine()->getRepository(Autor::class)->findOneByPokoj_idJoinedid($this->pokoj_id);
         return $autor;
     }
 
