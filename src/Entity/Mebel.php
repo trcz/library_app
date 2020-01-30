@@ -80,6 +80,10 @@ class Mebel
 
         return $this;
     }
+    public function __toString()
+    {
+        return $this->nazwa;
+    }
 
 
 }
