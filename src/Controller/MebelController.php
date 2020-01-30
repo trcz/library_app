@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Mebel;
+use App\Entity\Pokoj;
 use App\Form\MebelType;
 use App\Repository\MebelRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
