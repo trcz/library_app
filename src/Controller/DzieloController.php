@@ -22,7 +22,7 @@ class DzieloController extends AbstractController
      */
     public function index(DzieloRepository $dzieloRepository): Response
     {
-        $data = "Dziady";
+       /* $data = "Dziady";
         $em = $this->getDoctrine()->getManager();
         $query = $em->createQuery(
             'SELECT p, a.nazwisko FROM App\Entity\Autor_Dzielo p LEFT JOIN p.autor_id a
@@ -30,7 +30,7 @@ class DzieloController extends AbstractController
             ->setParameter('data','%'.$data.'%');
 
 
-        $dziela = $query->getResult();
+        $dziela = $query->getResult();*/
 
 
         return $this->render('dzielo/index.html.twig', [
