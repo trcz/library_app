@@ -35,7 +35,7 @@ class DzieloController extends AbstractController
 
         return $this->render('dzielo/index.html.twig', [
             'dzielos' => $dzieloRepository->findAll(),
-            'autor' => $dziela,
+            
 
         ]);
     }
