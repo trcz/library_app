@@ -9,7 +9,7 @@
         <label for="inputUsername">Nazwa użytkownika</label>
         <div id='inputUsername'> {{ form_widget(registrationForm.username, {'attr':{'class':'form-control col-sm-2'}}) }} </div>
         <label for="inputPassword">Hasło</label>
-        <div id='inputPassword'> {{ form_row(registrationForm.plainPassword) }} </div>
+        <div id='inputUsername'> {{ form_widget(registrationForm.plainPassword, {'attr':{'class':'form-control col-sm-2'}}) }} </div>
         <div id='inputUsername'> {{ form_row(registrationForm.agreeTerms) }} </div>
         <button class="btn btn-primary">Załóż konto</button>
     {{ form_end(registrationForm) }}
