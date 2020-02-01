@@ -7,7 +7,7 @@
 <h1 class="h3 mb-3 font-weight-normal">Zarejestruj się</h1>
     {{ form_start(registrationForm) }}
         <label for="inputUsername">Nazwa użytkownika</label>
-        <div id='inputUsername'> {{ form_row(registrationForm.username) }} </div>
+        <div id='inputUsername', class="form-control col-sm-2"> {{ form_row(registrationForm.username) }} </div>
         <label for="inputPassword">Hasło</label>
         <div id='inputPassword'> {{ form_row(registrationForm.plainPassword) }} </div>
         <div id='inputUsername'> {{ form_row(registrationForm.agreeTerms) }} </div>
