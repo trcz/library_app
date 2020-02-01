@@ -4,13 +4,13 @@
 
 {% block body %}
 <center>
-<h1 class="h3 mb-3 font-weight-normal">Zaloguj się</h1>
+<h1 class="h3 mb-3 font-weight-normal">Zarejestruj się</h1>
     {{ form_start(registrationForm) }}
-        <label for="inputUsername">Użytkownik</label>
+        <label for="inputUsername">Nazwa użytkownika</label>
         <div id='inputUsername'> {{ form_row(registrationForm.username) }} </div>
         <label for="inputPassword">Hasło</label>
         <div id='inputPassword'> {{ form_row(registrationForm.plainPassword) }} </div>
-        <div id='inputUsername'> {{ form_row(registrationForm.agreeTerms) }} </div>
+        <div id='inputUsername', text='Zapoznałem się z warunkami użytkowania'> {{ form_row(registrationForm.agreeTerms) }} </div>
         <button class="btn btn-primary">
     {{ form_end(registrationForm) }}
 {% endblock %}
