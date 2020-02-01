@@ -10,7 +10,7 @@
         <div id='inputUsername'> {{ form_row(registrationForm.username) }} </div>
         <label for="inputPassword">Hasło</label>
         <div id='inputPassword'> {{ form_row(registrationForm.plainPassword) }} </div>
-        <div id='inputUsername', text='Zapoznałem się z warunkami użytkowania'> {{ form_row(registrationForm.agreeTerms) }} </div>
+        <div id='inputUsername', label='Zapoznałem się z warunkami użytkowania'> {{ form_row(registrationForm.agreeTerms) }} </div>
         <button class="btn btn-primary">
     {{ form_end(registrationForm) }}
 {% endblock %}
