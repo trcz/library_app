@@ -99,14 +99,8 @@ class WypozyczenieController extends AbstractController
      */
     public function history(Request $request, UserInterface $user)
     {
-        $em = $this->getDoctrine()->getManager();
-        $query = $em->createQuery(
-            'SELECT p FROM App\Entity\Wypozyczenie p
-    WHERE p.uzytkownik_id LIKE :data')
-            ->setParameter('data',9);
-
-
-        $wypozyczenia = $query->getResult();
+        $userId = $user->getId();
+        $wypozyczenia = $this->getDoctrine()->getRepository(Wypozyczenie::class)->findBy(array('uzytkownik_id'=>$userId));
         return $this->render('wypozyczenie/historia.html.twig',[
             'wypozyczenies' => $wypozyczenia,
         ]);
