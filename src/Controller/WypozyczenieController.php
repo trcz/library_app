@@ -99,12 +99,11 @@ class WypozyczenieController extends AbstractController
      */
     public function history(Request $request, UserInterface $user)
     {
-        $userId = $request->request->get('user_id');
         $em = $this->getDoctrine()->getManager();
         $query = $em->createQuery(
             'SELECT p FROM App\Entity\Wypozyczenie p
-    WHERE p.uzytkownik_id LIKE :data')
-            ->setParameter('data',$userId);
+    WHERE p.uzytkownik_id LIKE 9')
+            ;
 
 
         $wypozyczenia = $query->getResult();
