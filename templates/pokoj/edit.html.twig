@@ -1,3 +1,4 @@
+<center>
 {% extends 'base.html.twig' %}
 
 {% block title %}Edytuj Pomieszczenie{% endblock %}
@@ -5,9 +6,10 @@
 {% block body %}
     <h1>Edytuj Pomieszczenie</h1>
 
-    {{ include('pokoj/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('pokoj/_form.html.twig', {'button_label': 'Zatwierdź'}) }}
 
     <a href="{{ path('pokoj_index') }}">Powrót do listy</a>
 
     {{ include('pokoj/_delete_form.html.twig') }}
 {% endblock %}
+</center>
