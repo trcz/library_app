@@ -1,13 +1,14 @@
-<center>
+
 {% extends 'base.html.twig' %}
 
 {% block title %}Dodaj Dzieło{% endblock %}
 
 {% block body %}
+    <center>
     <h1>Dodaj Dzieło</h1>
 
     {{ include('dzielo/_form.html.twig') }}
 
     <a href="{{ path('dzielo_index') }}">Powrót do listy</a>
+    </center>
 {% endblock %}
-</center>
