@@ -16,9 +16,6 @@
                 <th>Polozenie_aktualne</th>
                 <th>Zdjecie</th>
                 <th>Czy_wypozyczone</th>
-                <th>Data_dodania</th>
-                <th>Data_usuniecia</th>
-                <th>Czy_prywatne</th>
                 <th>Czy_dla_doroslych</th>
                 <th>actions</th>
             </tr>
@@ -35,9 +32,8 @@
                 <td>{{ dzielo.polozenieAktualne }}</td>
                 <td>{{ dzielo.zdjecie }}</td>
                 <td>{{ dzielo.czyWypozyczone ? 'Yes' : 'No' }}</td>
-                <td>{{ dzielo.dataDodania ? dzielo.dataDodania|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ dzielo.dataUsuniecia ? dzielo.dataUsuniecia|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ dzielo.czyPrywatne ? 'Yes' : 'No' }}</td>
+{#                <td>{{ dzielo.dataDodania ? dzielo.dataDodania|date('Y-m-d H:i:s') : '' }}</td>#}
+{#                <td>{{ dzielo.dataUsuniecia ? dzielo.dataUsuniecia|date('Y-m-d H:i:s') : '' }}</td>#}
                 <td>{{ dzielo.czyDlaDoroslych ? 'Yes' : 'No' }}</td>
                 <td>
                     <a href="{{ path('dzielo_show', {'id': dzielo.id}) }}">show</a>
