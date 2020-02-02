@@ -14,7 +14,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 /**
  * @Route("/dzielo")
- * @Security("has_role('ROLE_USER')")
+ * @Security("is_granted('ROLE_USER')")
  */
 class DzieloController extends AbstractController
 {
