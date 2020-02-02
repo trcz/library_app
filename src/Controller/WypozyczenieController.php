@@ -84,8 +84,7 @@ class WypozyczenieController extends AbstractController
     public function rent(Request $request)
     {
         $dzielo_id = $request->request->get('dzielo');
-        $dzielo = new Dzielo();
-        $dzielo->set
+        $dzielo = $this->getDoctrine()->getRepository(Dzielo::class)->find($dzielo_id);
 
         $uzytkownik_id = $request->request->get('user_id');
         $status = $request->request->get('status');
@@ -93,7 +92,7 @@ class WypozyczenieController extends AbstractController
 
         $em = $this->getDoctrine()->getManager();
         $wypozyczenie = new Wypozyczenie();
-        $wypozyczenie->setDzieloId($dzielo_id);
+        $wypozyczenie->setDzieloId($dzielo->getId());
         $wypozyczenie->setUzytkownikId($uzytkownik_id);
         $wypozyczenie->setStatus($status);
         $wypozyczenie->setDataWypozyczenia($data_wypozyczenia);
