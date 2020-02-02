@@ -20,19 +20,15 @@
                 <td>{{ dzielo.kodJezyka }}</td>
             </tr>
             <tr>
-                <th>Rodzaj_dokumntu</th>
+                <th>Rodzaj dokumentu</th>
                 <td>{{ dzielo.rodzajDokumentu }}</td>
             </tr>
             <tr>
-                <th>Kod_dziala</th>
-                <td>{{ dzielo.kodDziala }}</td>
-            </tr>
-            <tr>
-                <th>Polozenie_pierwotne</th>
+                <th>Polozenie pierwotne</th>
                 <td>{{ dzielo.polozeniePierwotne }}</td>
             </tr>
             <tr>
-                <th>Polozenie_aktualne</th>
+                <th>Polozenie aktualne</th>
                 <td>{{ dzielo.polozenieAktualne }}</td>
             </tr>
             <tr>
@@ -40,24 +36,22 @@
                 <td>{{ dzielo.zdjecie }}</td>
             </tr>
             <tr>
-                <th>Czy_wypozyczone</th>
-                <td>{{ dzielo.czyWypozyczone ? 'Yes' : 'No' }}</td>
+                <th>Czy wypożyczone</th>
+                <td>{{ dzielo.czyWypozyczone ? 'Tak' : 'Nie' }}</td>
             </tr>
+            {% if app.user.username == 'admin' %}
             <tr>
-                <th>Data_dodania</th>
+                <th>Data dodania</th>
                 <td>{{ dzielo.dataDodania ? dzielo.dataDodania|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
+            {% endif %}
             <tr>
-                <th>Data_usuniecia</th>
-                <td>{{ dzielo.dataUsuniecia ? dzielo.dataUsuniecia|date('Y-m-d H:i:s') : '' }}</td>
+                <th>Czy prywatne</th>
+                <td>{{ dzielo.czyPrywatne ? 'Tak' : 'Nie' }}</td>
             </tr>
             <tr>
-                <th>Czy_prywatne</th>
-                <td>{{ dzielo.czyPrywatne ? 'Yes' : 'No' }}</td>
-            </tr>
-            <tr>
-                <th>Czy_dla_doroslych</th>
-                <td>{{ dzielo.czyDlaDoroslych ? 'Yes' : 'No' }}</td>
+                <th>Czy dla doroslych</th>
+                <td>{{ dzielo.czyDlaDoroslych ? 'Tak' : 'Nie' }}</td>
             </tr>
         </tbody>
     </table>
