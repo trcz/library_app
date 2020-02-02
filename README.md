@@ -2,20 +2,23 @@
 Library management application for IT studies project
 # Do zrobienia:
 - [ ] Dodawanie i wyświetlanie zdjęć
+- [ ] Jak się wyświetla dzieła to, żeby też autorzy się wyświetlali
+- [ ] Napisać diagram kontrolerów (klasami będą kontrolery, w których skład będą wchodziły metody z tych kontrolerów. W skrócie przepisać wszystko do diagramów z kodu na githubie)
+- [ ] Ograniczenia na pola tekstowe (blokowanie znaków itp)
+- [ ] wygląd przycisków pod tabelami poprawić
+- [ ] Poprawa wyglądu formularzy (dodawania i edycji rekordów w kazdej kategorii)
+- [ ] Dopasować user_admin_menu do TWIGa
+
+DONE:
 - [x] Menu użytkowe użytkownika
 - [x] Menu użytkowe admina
-- [ ] W menu nawigacyjnym powinny być też odnośniki jakies do podstron odpowiednich
-- [ ] Jak się wyświetla dzieła to, żeby też autorzy się wyświetlali
+- [x] W menu nawigacyjnym powinny być też odnośniki jakies do podstron odpowiednich
+- [x] Instrukcja obsługi
 - [x] Formularz rejestracji do poprawy wygląd
 - [x] Formularz logowania na środek ekranu przesunąć
 - [x] W menu nawigacyjnym poprawić responsywność (przy drop-downie cała strona się rozjeżdża w bok)
 - [x] Przeanalizować diagram klas (czy nie ma czegoś do poprawki itp)
 - [x] Przeanalizować również diagram interfejsu
-- [ ] Napisać diagram kontrolerów (klasami będą kontrolery, w których skład będą wchodziły metody z tych kontrolerów. W skrócie przepisać wszystko do diagramów z kodu na githubie)
-- [ ] Ograniczenia na pola tekstowe (blokowanie znaków itp)
-- [ ] wygląd przycisków pod tabelami poprawić
-- [x] Instrukcja obsługi
-- [ ] Poprawa wyglądu formularzy (dodawania i edycji rekordów w kazdej kategorii)
 
 # Krótki przewodnik po strukturze projektu
 - Controllery znajdują się pod ścieżką /src/Controller/
