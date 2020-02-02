@@ -77,7 +77,7 @@ class Wypozyczenie
         return $this->dzielo_id;
     }
 
-    public function setDzieloId( $dzielo_id)
+    public function setDzieloId(Dzielo $dzielo_id)
     {
         $this->dzielo_id = $dzielo_id;
 
@@ -89,7 +89,7 @@ class Wypozyczenie
         return $this->uzytkownik_id;
     }
 
-    public function setUzytkownikId($uzytkownik_id)
+    public function setUzytkownikId(Uzytkownik $uzytkownik_id)
     {
         $this->uzytkownik_id = $uzytkownik_id;
 
