@@ -120,7 +120,7 @@ class Dzielo
     }
 
     /**
-     * @param mixed $rodzaj_dokumntu
+     * @param mixed $rodzaj_dokumentu
      */
     public function setRodzajDokumentu($rodzaj_dokumentu)
     {
@@ -291,6 +291,9 @@ class Dzielo
     {
         return $this->id;
     }
-
+    public function __toString()
+    {
+        return $this->tytul;
+    }
 
 }
