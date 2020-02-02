@@ -16,4 +16,11 @@ class AdminController extends AbstractController
             'controller_name' => 'AdminController',
         ]);
     }
+    /**
+     * @Route("/", name="menu_glowne")
+     */
+    public function menu()
+    {
+        return $this->render('index.html.twig');
+    }
 }
