@@ -27,7 +27,12 @@
 			<center>
 				<h1 class="h3 mb-3 font-weight-normal"><strong>Menu użytkownika 📚</strong></h1>
 				<a class="btn btn-dark" href="/dzielo" role="button">Zawartość biblioteki</a>
-				<a class="btn btn-dark" href="{{ path('historia') }}" role="button">Historia wypożyczeń</a>
+				<form method="POST" action="{{ path('historia') }}">
+					<input type="hidden" value="{{ app.user.id }}" name="user_id">
+					<button class="btn btn-dark" type="submit">Historia wypożyczeń</button>
+{#					<a class="btn btn-dark" href="{{ path('historia') }}" role="button">Historia wypożyczeń</a>#}
+
+				</form>
 				<a class="btn btn-dark" href="/wypozyczenie" role="button">Wypożycz dzieło</a>
 				<a class="btn btn-dark" href="/zwroc" role="button">Zwróć dzieło</a></td>
 			</center>
