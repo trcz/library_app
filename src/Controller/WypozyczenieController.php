@@ -82,7 +82,7 @@ class WypozyczenieController extends AbstractController
      */
     public function rent(Request $request)
     {
-        $dzielo_id = $request->request->get('dzielo');
+        $dzielo_id = intval($request->request->get('dzielo'));
         $uzytkownik_id = $request->request->get('user_id');
         $status = $request->request->get('status');
         $data_wypozyczenia = date("Y-m-d H:i:s");
