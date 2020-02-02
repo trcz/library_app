@@ -44,11 +44,12 @@
                 <th>Data dodania</th>
                 <td>{{ dzielo.dataDodania ? dzielo.dataDodania|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
-            {% endif %}
+
             <tr>
                 <th>Czy prywatne</th>
                 <td>{{ dzielo.czyPrywatne ? 'Tak' : 'Nie' }}</td>
             </tr>
+            {% endif %}
             <tr>
                 <th>Czy dla doroslych</th>
                 <td>{{ dzielo.czyDlaDoroslych ? 'Tak' : 'Nie' }}</td>
