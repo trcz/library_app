@@ -2,19 +2,19 @@
 Library management application for IT studies project
 # Do zrobienia:
 - [ ] Dodawanie i wyświetlanie zdjęć
-- [ ] Menu użytkowe użytkownika 
-- [ ] Menu użytkowe admina
+- [x] Menu użytkowe użytkownika 
+- [x] Menu użytkowe admina
 - [ ] W menu nawigacyjnym powinny być też odnośniki jakies do podstron odpowiednich
 - [ ] Jak się wyświetla dzieła to, żeby też autorzy się wyświetlali
-- [ ] Formularz rejestracji do poprawy wygląd
-- [ ] Formularz logowania na środek ekranu przesunąć
+- [x] Formularz rejestracji do poprawy wygląd
+- [x] Formularz logowania na środek ekranu przesunąć
 - [ ] W menu nawigacyjnym poprawić responsywność (przy drop-downie cała strona się rozjeżdża w bok)
-- [ ] Przeanalizować diagram klas (czy nie ma czegoś do poprawki itp)
-- [ ] Przeanalizować również diagram interfejsu
+- [x] Przeanalizować diagram klas (czy nie ma czegoś do poprawki itp)
+- [x] Przeanalizować również diagram interfejsu
 - [ ] Napisać diagram kontrolerów (klasami będą kontrolery, w których skład będą wchodziły metody z tych kontrolerów. W skrócie przepisać wszystko do diagramów z kodu na githubie)
 - [ ] Ograniczenia na pola tekstowe (blokowanie znaków itp)
 - [ ] wygląd przycisków pod tabelami poprawić
-- [ ] Instrukcja obsługi
+- [x] Instrukcja obsługi
 - [ ] Poprawa wyglądu formularzy (dodawania i edycji rekordów w kazdej kategorii)
 
 # Krótki przewodnik po strukturze projektu
