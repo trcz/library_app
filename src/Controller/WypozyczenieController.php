@@ -50,6 +50,17 @@ class WypozyczenieController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
+    /**
+     * @Route("/historia", name="historia")
+     */
+    public function history(Request $request, UserInterface $user)
+    {
+        $userId = $user->getId();
+        $wypozyczenia = $this->getDoctrine()->getRepository(Wypozyczenie::class)->findBy(array('uzytkownik_id'=>$userId));
+        return $this->render('wypozyczenie/historia.html.twig',[
+            'wypozyczenies' => $wypozyczenia,
+        ]);
+    }
 
     /**
      * @Route("/{id}", name="wypozyczenie_show", methods={"GET"})
@@ -80,17 +91,7 @@ class WypozyczenieController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
-    /**
-     * @Route("/historia", name="historia")
-     */
-    public function history(Request $request, UserInterface $user)
-    {
-        $userId = $user->getId();
-        $wypozyczenia = $this->getDoctrine()->getRepository(Wypozyczenie::class)->findBy(array('uzytkownik_id'=>$userId));
-        return $this->render('wypozyczenie/historia.html.twig',[
-            'wypozyczenies' => $wypozyczenia,
-        ]);
-    }
+
     /**
      * @Route("/oddaj", name="oddaj")
      */
