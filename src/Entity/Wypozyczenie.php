@@ -81,12 +81,12 @@ class Wypozyczenie
         return $this->dzielo_id;
     }
 
-//    public function setDzieloId(Dzielo $dzielo_id)
-//    {
-//        $this->dzielo_id = $dzielo_id;
-//
-//        return $this;
-//    }
+    public function setDzieloId(Dzielo $dzielo_id)
+    {
+        $this->dzielo_id = $dzielo_id;
+
+        return $this;
+    }
 
     public function getUzytkownikId(): ?Uzytkownik
     {
