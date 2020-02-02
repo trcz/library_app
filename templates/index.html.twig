@@ -3,19 +3,8 @@
 {% block title %}Menu użytkowe{% endblock %}
 
 {% block body %}
-<br>
-	<div class="border border-success" style="margin-left:150px;margin-right:150px">
-	<br>
-		<center>
-		<h1 class="h3 mb-3 font-weight-normal"><strong>Menu użytkownika 📚</strong></h1>
-		<a class="btn btn-dark" href="#" role="button">Zawartość biblioteki</a></td>
-		<a class="btn btn-dark" href="#" role="button">Historia wypożyczeń</a></td>
-		<a class="btn btn-dark" href="#" role="button">Wypożycz dzieło</a></td>
-		<a class="btn btn-dark" href="#" role="button">Zwróć dzieło</a></td>
-		</center>
-	<br>		
-	</div>
-	<br><br>
+
+{% if app.user.username is 'admin'  %}<br>
 	<div class="border border-danger" style="margin-left:150px;margin-right:150px">
 	<br>
 		<center>
@@ -30,4 +19,19 @@
 		
 		</center>
 	<br>
+		{% else %}
+		<br>
+		<div class="border border-success" style="margin-left:150px;margin-right:150px">
+			<br>
+			<center>
+				<h1 class="h3 mb-3 font-weight-normal"><strong>Menu użytkownika 📚</strong></h1>
+				<a class="btn btn-dark" href="#" role="button">Zawartość biblioteki</a></td>
+				<a class="btn btn-dark" href="#" role="button">Historia wypożyczeń</a></td>
+				<a class="btn btn-dark" href="#" role="button">Wypożycz dzieło</a></td>
+				<a class="btn btn-dark" href="#" role="button">Zwróć dzieło</a></td>
+			</center>
+			<br>
+		</div>
+		<br>
+		{% endif %}
 {% endblock %}
