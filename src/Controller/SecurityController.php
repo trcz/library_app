@@ -13,7 +13,7 @@ use App\Entity\Dzielo;
 class SecurityController extends AbstractController
 {
     /**
-     * @Route("/ano/login", name="app_login")
+     * @Route("/login", name="app_login")
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
