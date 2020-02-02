@@ -1,13 +1,13 @@
-<center>
 {% extends 'base.html.twig' %}
 
 {% block title %}Dodaj Mebel{% endblock %}
 
 {% block body %}
+    <center>
     <h1>Dodaj Mebel</h1>
 
     {{ include('mebel/_form.html.twig') }}
 
     <a href="{{ path('mebel_index') }}">Powrót do listy</a>
+    </center>
 {% endblock %}
-</center>
