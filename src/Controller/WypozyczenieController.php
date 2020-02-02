@@ -94,6 +94,24 @@ class WypozyczenieController extends AbstractController
         return $this->redirectToRoute('wypozyczenie_index');
     }
     /**
+     * @Route("/historia", name='historia')
+     */
+    public function history(UserInterface $user)
+    {
+        $userId = $user->getId();
+        $em = $this->getDoctrine()->getManager();
+        $query = $em->createQuery(
+            'SELECT p FROM App\Entity\Wypozyczenie p
+    WHERE p.uzytkownik_id LIKE :data')
+            ->setParameter('data',$userId);
+
+
+        $wypozyczenia = $query->getResult();
+        return $this->render('wypozyczenie/historia.html.twig',[
+            'wypozyczenies' => $wypozyczenia,
+        ]);
+    }
+    /**
      * @Route("/oddaj", name="oddaj")
      */
     public function giveBack(Request $request)
@@ -105,7 +123,7 @@ class WypozyczenieController extends AbstractController
         $em = $this->getDoctrine()->getManager();
         $query = $em->createQuery(
             'SELECT p FROM App\Entity\Wypozyczenie p
-    WHERE p.uzytkownik_id LIKE :data')
+    WHERE p.id LIKE :data')
             ->setParameter('data',$data);
 
 
