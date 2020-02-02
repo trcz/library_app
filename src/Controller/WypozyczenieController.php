@@ -76,7 +76,26 @@ class WypozyczenieController extends AbstractController
         $wypozyczenia = $this->getDoctrine()->getRepository(Wypozyczenie::class)->findBy(array('uzytkownik_id'=>$userId));
         return $this->redirectToRoute('historia');
     }
+    /**
+     * @Route("/wypozycz", name="wypozycz")
+     */
+    public function rent(Request $request)
+    {
+        $dzielo_id = $request->request->get('dzielo');
+        $uzytkownik_id = $request->request->get('user_id');
+        $status = $request->request->get('status');
+        $data_wypozyczenia = date("Y-m-d H:i:s");
 
+        $em = $this->getDoctrine()->getManager();
+        $wypozyczenie = new Wypozyczenie();
+        $wypozyczenie->setDzieloId($dzielo_id);
+        $wypozyczenie->setUzytkownikId($uzytkownik_id);
+        $wypozyczenie->setStatus($status);
+        $wypozyczenie->setDataWypozyczenia($data_wypozyczenia);
+        $em->persist($wypozyczenie);
+        $em->flush();
+        return $this->redirectToRoute('historia');
+    }
     /**
      * @Route("/{id}", name="wypozyczenie_show", methods={"GET"})
      */
