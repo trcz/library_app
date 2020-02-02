@@ -80,20 +80,6 @@ class WypozyczenieController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
-
-    /**
-     * @Route("/{id}", name="wypozyczenie_delete", methods={"DELETE"})
-     */
-    public function delete(Request $request, Wypozyczenie $wypozyczenie): Response
-    {
-        if ($this->isCsrfTokenValid('delete'.$wypozyczenie->getId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($wypozyczenie);
-            $entityManager->flush();
-        }
-
-        return $this->redirectToRoute('wypozyczenie_index');
-    }
     /**
      * @Route("/historia", name="historia")
      */
@@ -126,4 +112,19 @@ class WypozyczenieController extends AbstractController
             'wypozyczenies' => $wypozyczenia,
         ]);
     }
+
+    /**
+     * @Route("/{id}", name="wypozyczenie_delete", methods={"DELETE"})
+     */
+    public function delete(Request $request, Wypozyczenie $wypozyczenie): Response
+    {
+        if ($this->isCsrfTokenValid('delete'.$wypozyczenie->getId(), $request->request->get('_token'))) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($wypozyczenie);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('wypozyczenie_index');
+    }
+
 }
