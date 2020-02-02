@@ -23,6 +23,7 @@
                 <td>
                     <form action="{{ path('oddaj') }}" method="POST" >
                         <input type="hidden" value="{{ wypozyczenie.id }}" name="oddaj">
+                        <input type ="hidden" value="{{ app.user.id }}" name="user_id">
                         <button class="btn btn-lg btn-primary" href="{{ path('oddaj')}}">Oddaj</button>
                     </form>
                 </td>

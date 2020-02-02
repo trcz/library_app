@@ -63,6 +63,23 @@ class WypozyczenieController extends AbstractController
     }
 
     /**
+     * @Route("/oddaj", name="oddaj")
+     */
+    public function giveBack(Request $request)
+    {
+        $data = $request->request->get('oddaj');
+        $userId = $request->request->get('user_id');
+        $wypozyczenia = $this->getDoctrine()->getRepository(Wypozyczenie::class)->findBy(array('uzytkownik_id'=>$userId));
+        $em = $this->getDoctrine()->getManager();
+        $wypozyczenie = $em->getRepository(Wypozyczenie::class)->find($data);
+        $wypozyczenie->setStatus(0);
+        $em->flush();
+        return $this->render('wypozyczenie/historia.html.twig',[
+            'wypozyczenies' => $wypozyczenia
+        ]);
+    }
+
+    /**
      * @Route("/{id}", name="wypozyczenie_show", methods={"GET"})
      */
     public function show(Wypozyczenie $wypozyczenie): Response
@@ -89,28 +106,6 @@ class WypozyczenieController extends AbstractController
         return $this->render('wypozyczenie/edit.html.twig', [
             'wypozyczenie' => $wypozyczenie,
             'form' => $form->createView(),
-        ]);
-    }
-
-    /**
-     * @Route("/oddaj", name="oddaj")
-     */
-    public function giveBack(Request $request)
-    {
-
-        $data = $request->request->get('oddaj');
-
-
-        $em = $this->getDoctrine()->getManager();
-        $query = $em->createQuery(
-            'SELECT p FROM App\Entity\Wypozyczenie p
-    WHERE p.id LIKE :data')
-            ->setParameter('data',$data);
-
-
-        $wypozyczenia = $query->getResult();
-        return $this->render('wypozyczenie/historia.html.twig',[
-            'wypozyczenies' => $wypozyczenia,
         ]);
     }
 
