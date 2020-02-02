@@ -99,7 +99,7 @@ class WypozyczenieController extends AbstractController
      */
     public function history(UserInterface $user)
     {
-        $userId = $user->getId();
+        $userId = 9;
         $em = $this->getDoctrine()->getManager();
         $query = $em->createQuery(
             'SELECT p FROM App\Entity\Wypozyczenie p
