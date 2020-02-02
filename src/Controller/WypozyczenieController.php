@@ -91,7 +91,7 @@ class WypozyczenieController extends AbstractController
         $data_wypozyczenia = date("Y-m-d H:i:s");
 
         $em = $this->getDoctrine()->getManager();
-        $wypozyczenie = new Wypozyczenie($dzielo_id,$uzytkownik_id,$status,$data_wypozyczenia);
+        $wypozyczenie = new Wypozyczenie($status,$data_wypozyczenia,$dzielo_id,$uzytkownik_id);
 //        $wypozyczenie->setDzieloId($dzielo->getId());
 //        $wypozyczenie->setUzytkownikId($uzytkownik_id);
 //        $wypozyczenie->setStatus($status);
