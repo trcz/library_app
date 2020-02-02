@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Wypozyczenie{% endblock %}
+
+{% block body %}
+    <h1>Wypozyczenie</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ wypozyczenie.id }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ wypozyczenie.status ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Data_wypozyczenia</th>
+                <td>{{ wypozyczenie.dataWypozyczenia ? wypozyczenie.dataWypozyczenia|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('wypozyczenie_index') }}">back to list</a>
+
+    <a href="{{ path('wypozyczenie_edit', {'id': wypozyczenie.id}) }}">edit</a>
+
+    {{ include('wypozyczenie/_delete_form.html.twig') }}
+{% endblock %}
