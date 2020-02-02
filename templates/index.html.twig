@@ -1,7 +1,33 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Mebel index{% endblock %}
+{% block title %}Menu użytkowe{% endblock %}
 
 {% block body %}
+<br>
+	<div class="border border-success" style="margin-left:150px;margin-right:150px">
+	<br>
+		<center>
+		<h1 class="h3 mb-3 font-weight-normal"><strong>Menu użytkownika 📚</strong></h1>
+		<a class="btn btn-dark" href="#" role="button">Zawartość biblioteki</a></td>
+		<a class="btn btn-dark" href="#" role="button">Historia wypożyczeń</a></td>
+		<a class="btn btn-dark" href="#" role="button">Wypożycz dzieło</a></td>
+		<a class="btn btn-dark" href="#" role="button">Zwróć dzieło</a></td>
+		</center>
+	<br>		
+	</div>
+	<br><br>
+	<div class="border border-danger" style="margin-left:150px;margin-right:150px">
+	<br>
+		<center>
+		<h1 class="h3 mb-3 font-weight-normal"><strong>Menu zarządzania administratora 🛠️</strong></h1>
 
+		<a class="btn btn-danger" href="#" role="button">Użytkownicy systemu</a> <!--Widoczne tylko dla head admina!!-->
+		<br><br>
+		<a class="btn btn-dark" href="#" role="button">Dzieła</a>
+		<a class="btn btn-dark" href="#" role="button">Pomieszczenia</a>
+		<a class="btn btn-dark" href="#" role="button">Meble</a>
+		<a class="btn btn-dark" href="#" role="button">Półki</a>
+		
+		</center>
+	<br>
 {% endblock %}
