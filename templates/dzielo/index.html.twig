@@ -32,8 +32,8 @@
 {#                <td>{{ dzielo.dataUsuniecia ? dzielo.dataUsuniecia|date('Y-m-d H:i:s') : '' }}</td>#}
                 <td>{{ dzielo.czyDlaDoroslych ? 'Yes' : 'No' }}</td>
                 <td>
-                    <a href="{{ path('dzielo_show', {'id': dzielo.id}) }}">show</a>
-                    <a href="{{ path('dzielo_edit', {'id': dzielo.id}) }}">edit</a>
+                    <a href="{{ path('dzielo_show', {'id': dzielo.id}) }}">Pokaż</a>
+                    <a href="{{ path('dzielo_edit', {'id': dzielo.id}) }}">Edytuj</a>
                 </td>
             </tr>
         {% else %}

@@ -21,17 +21,17 @@
                 <td>{{ wypozyczenie.status ? 'Yes' : 'No' }}</td>
                 <td>{{ wypozyczenie.dataWypozyczenia ? wypozyczenie.dataWypozyczenia|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <a href="{{ path('wypozyczenie_show', {'id': wypozyczenie.id}) }}">show</a>
-                    <a href="{{ path('wypozyczenie_edit', {'id': wypozyczenie.id}) }}">edit</a>
+                    <a href="{{ path('wypozyczenie_show', {'id': wypozyczenie.id}) }}">Pokaż</a>
+                    <a href="{{ path('wypozyczenie_edit', {'id': wypozyczenie.id}) }}">Edytuj</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="4">no records found</td>
+                <td colspan="4">Brak znalezionych rekordów</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('wypozyczenie_new') }}">Create new</a>
+    <a href="{{ path('wypozyczenie_new') }}">Wypożycz</a>
 {% endblock %}

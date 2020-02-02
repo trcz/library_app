@@ -22,9 +22,9 @@
         </tbody>
     </table>
 
-    <a href="{{ path('polka_index') }}">back to list</a>
+    <a href="{{ path('polka_index') }}">Powrót do listy</a>
 
-    <a href="{{ path('polka_edit', {'id': polka.id}) }}">edit</a>
+    <a href="{{ path('polka_edit', {'id': polka.id}) }}">Edytuj</a>
 
     {{ include('polka/_delete_form.html.twig') }}
 {% endblock %}

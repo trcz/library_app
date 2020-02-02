@@ -19,17 +19,17 @@
                 <td>{{ pokoj.id }}</td>
                 <td>{{ pokoj.nazwa }}</td>
                 <td>
-                    <a href="{{ path('pokoj_show', {'id': pokoj.id}) }}">show</a>
-                    <a href="{{ path('pokoj_edit', {'id': pokoj.id}) }}">edit</a>
+                    <a href="{{ path('pokoj_show', {'id': pokoj.id}) }}">Pokaż</a>
+                    <a href="{{ path('pokoj_edit', {'id': pokoj.id}) }}">Edytuj</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="3">no records found</td>
+                <td colspan="3">Brak znalezionych rekordów</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('pokoj_new') }}">Create new</a>
+    <a href="{{ path('pokoj_new') }}">Dodaj pokój</a>
 {% endblock %}
