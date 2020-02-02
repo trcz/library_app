@@ -102,8 +102,8 @@ class WypozyczenieController extends AbstractController
         $em = $this->getDoctrine()->getManager();
         $query = $em->createQuery(
             'SELECT p FROM App\Entity\Wypozyczenie p
-    WHERE p.uzytkownik_id LIKE 9')
-            ;
+    WHERE p.uzytkownik_id LIKE :data')
+            ->setParameter('data',9);
 
 
         $wypozyczenia = $query->getResult();
