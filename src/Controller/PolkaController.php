@@ -12,6 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("/polka")
+ * @Security("is_granted('ROLE_USER')")
  */
 class PolkaController extends AbstractController
 {

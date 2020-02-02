@@ -12,6 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("/pokoj")
+ * @Security("is_granted('ROLE_USER')")
  */
 class PokojController extends AbstractController
 {

@@ -12,6 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("/wypozyczenie")
+ * @Security("is_granted('ROLE_USER')")
  */
 class WypozyczenieController extends AbstractController
 {

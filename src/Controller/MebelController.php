@@ -13,6 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("/mebel")
+ * @Security("is_granted('ROLE_USER')")
  */
 class MebelController extends AbstractController
 {
