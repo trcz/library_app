@@ -95,7 +95,7 @@ class WypozyczenieController extends AbstractController
         return $this->redirectToRoute('wypozyczenie_index');
     }
     /**
-     * @Route("/historia", name='historia')
+     * @Route("/historia", name="historia")
      */
     public function history(UserInterface $user)
     {
