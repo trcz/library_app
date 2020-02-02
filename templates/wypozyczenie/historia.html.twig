@@ -18,7 +18,7 @@
         {% for wypozyczenie in wypozyczenies %}
             <tr>
                 <td>{{ wypozyczenie.id }}</td>
-                <td>{{ wypozyczenie.status ? 'Yes' : 'No' }}</td>
+                <td>{{ wypozyczenie.status ? 'Wypożyczone' : 'Oddane' }}</td>
                 <td>{{ wypozyczenie.dataWypozyczenia ? wypozyczenie.dataWypozyczenia|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
                     <form action="{{ path('oddaj') }}" method="POST" >
