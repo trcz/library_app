@@ -1,12 +1,22 @@
 # Library app
 Library management application for IT studies project
 # Do zrobienia:
-  - [ ] Poprawienie diagramu klas
-  - [ ] Usunięcie interfejsu z diagramu klas i wpisanie metod z tego interfejsu po prostu do każdej klasy która po nim dziedziczyła je
-  - [ ] Poprawienie diagramu interfejsu i dodanie interfejsów (stron) dostępnych dla administratora (takie jak np. strona dodawania pokoju itp.)
-  - [ ] Zaprojektowanie UI (proponuję zacząć od menu nawigacyjnego, które będzie na górze strony, może coś takiego [BootStrap navbar](https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=navbar-color-schemes))
-  - [ ] Backend do każdego widoku (napisanie metod w kontrolerach)
-  - [ ] Frontend do każdego widoku (napisanie template'ów w html.twig)
+- [ ] Dodawanie i wyświetlanie zdjęć
+- [ ] Menu użytkowe użytkownika 
+- [ ] Menu użytkowe admina
+- [ ] W menu nawigacyjnym powinny być też odnośniki jakies do podstron odpowiednich
+- [ ] Jak się wyświetla dzieła to, żeby też autorzy się wyświetlali
+- [ ] Formularz rejestracji do poprawy wygląd
+- [ ] Formularz logowania na środek ekranu przesunąć
+- [ ] W menu nawigacyjnym poprawić responsywność (przy drop-downie cała strona się rozjeżdża w bok)
+- [ ] Przeanalizować diagram klas (czy nie ma czegoś do poprawki itp)
+- [ ] Przeanalizować również diagram interfejsu
+- [ ] Napisać diagram kontrolerów (klasami będą kontrolery, w których skład będą wchodziły metody z tych kontrolerów. W skrócie przepisać wszystko do diagramów z kodu na githubie)
+- [ ] Ograniczenia na pola tekstowe (blokowanie znaków itp)
+- [ ] wygląd przycisków pod tabelami poprawić
+- [ ] Instrukcja obsługi
+- [ ] Poprawa wyglądu formularzy (dodawania i edycji rekordów w kazdej kategorii)
+
 # Krótki przewodnik po strukturze projektu
 - Controllery znajdują się pod ścieżką /src/Controller/ 
   - Każdy kontroler dotyczy jednego obrębu zagadnień (UserController dotyczy rzeczy związanych z kontem użytkownika itp, DzieloController   dotyczy rzeczy związanych z dziełami np wyświetlanie ich, dodawanie itp)
