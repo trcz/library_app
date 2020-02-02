@@ -97,9 +97,9 @@ class WypozyczenieController extends AbstractController
     /**
      * @Route("/historia", name="historia")
      */
-    public function history(UserInterface $user)
+    public function history(Request $request, UserInterface $user)
     {
-        $userId = 9;
+        $userId = $request->request->get('user_id');
         $em = $this->getDoctrine()->getManager();
         $query = $em->createQuery(
             'SELECT p FROM App\Entity\Wypozyczenie p
