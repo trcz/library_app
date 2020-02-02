@@ -291,6 +291,9 @@ class Dzielo
     {
         return $this->id;
     }
-
+    public function __toString()
+    {
+        return $this->tytul;
+    }
 
 }
