@@ -1,11 +1,15 @@
+
 {% extends 'base.html.twig' %}
 
-{% block title %}Dodaj Autora{% endblock %}
+{% block title %}<center>Dodaj Autora</center>{% endblock %}
 
 {% block body %}
+    <center>
     <h1>Dodaj Autora</h1>
 
     {{ include('autor/_form.html.twig') }}
 
     <a href="{{ path('autor_index') }}">Powrót do listy</a>
+    </center>
 {% endblock %}
+

@@ -1,11 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Dodaj Pokój{% endblock %}
+{% block title %}<center>Dodaj Pokój</center>{% endblock %}
 
 {% block body %}
+    <center>
     <h1>Dodaj Pokój</h1>
 
     {{ include('pokoj/_form.html.twig') }}
 
     <a href="{{ path('pokoj_index') }}">Powrót do listy</a>
+    </center>
 {% endblock %}
