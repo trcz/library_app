@@ -99,19 +99,19 @@ class WypozyczenieController extends AbstractController
     public function giveBack(Request $request)
     {
 
-        $data = $request->request->get('search');
+        $data = $request->request->get('oddaj');
 
 
         $em = $this->getDoctrine()->getManager();
         $query = $em->createQuery(
-            'SELECT p FROM App\Entity\Dzielo p
-    WHERE p.tytul LIKE :data')
-            ->setParameter('data','%'.$data.'%');
+            'SELECT p FROM App\Entity\Wypozyczenie p
+    WHERE p.uzytkownik_id LIKE :data')
+            ->setParameter('data',$data);
 
 
-        $dziela = $query->getResult();
-        return $this->render('dzielo/index.html.twig',[
-            'dzielos' => $dziela,
+        $wypozyczenia = $query->getResult();
+        return $this->render('wypozyczenie/historia.html.twig',[
+            'wypozyczenies' => $wypozyczenia,
         ]);
     }
 }

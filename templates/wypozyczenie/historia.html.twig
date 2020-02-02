@@ -21,8 +21,8 @@
                 <td>{{ wypozyczenie.status ? 'Yes' : 'No' }}</td>
                 <td>{{ wypozyczenie.dataWypozyczenia ? wypozyczenie.dataWypozyczenia|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <form action="{{ path('oddaj') }}" method="POST">
-                        <input type="hidden" value="{{ wypozyczenie.id }}">
+                    <form action="{{ path('oddaj') }}" method="POST" >
+                        <input type="hidden" value="{{ wypozyczenie.id }}" name="oddaj">
                         <button href="{{ path('wypozyczenie_show')}}">Oddaj</button>
                     </form>
                 </td>
