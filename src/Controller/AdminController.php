@@ -21,6 +21,8 @@ class AdminController extends AbstractController
      */
     public function menu()
     {
-        return $this->render('index.html.twig');
+        return $this->render('index.html.twig', [
+
+        ]);
     }
 }
