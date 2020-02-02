@@ -89,7 +89,7 @@ class Wypozyczenie
         return $this->uzytkownik_id;
     }
 
-    public function setUzytkownikId(?Uzytkownik $uzytkownik_id): self
+    public function setUzytkownikId($uzytkownik_id)
     {
         $this->uzytkownik_id = $uzytkownik_id;
 
