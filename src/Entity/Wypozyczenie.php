@@ -77,7 +77,7 @@ class Wypozyczenie
         return $this->dzielo_id;
     }
 
-    public function setDzieloId(?Dzielo $dzielo_id): self
+    public function setDzieloId( $dzielo_id)
     {
         $this->dzielo_id = $dzielo_id;
 
