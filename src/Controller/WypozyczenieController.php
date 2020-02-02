@@ -93,4 +93,25 @@ class WypozyczenieController extends AbstractController
 
         return $this->redirectToRoute('wypozyczenie_index');
     }
+    /**
+     * @Route("/oddaj", name="oddaj")
+     */
+    public function giveBack(Request $request)
+    {
+
+        $data = $request->request->get('search');
+
+
+        $em = $this->getDoctrine()->getManager();
+        $query = $em->createQuery(
+            'SELECT p FROM App\Entity\Dzielo p
+    WHERE p.tytul LIKE :data')
+            ->setParameter('data','%'.$data.'%');
+
+
+        $dziela = $query->getResult();
+        return $this->render('dzielo/index.html.twig',[
+            'dzielos' => $dziela,
+        ]);
+    }
 }
