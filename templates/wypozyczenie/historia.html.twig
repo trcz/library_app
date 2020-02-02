@@ -23,7 +23,7 @@
                 <td>
                     <form action="{{ path('oddaj') }}" method="POST" >
                         <input type="hidden" value="{{ wypozyczenie.id }}" name="oddaj">
-                        <button href="{{ path('oddaj')}}">Oddaj</button>
+                        <button class="btn btn-lg btn-primary" href="{{ path('oddaj')}}">Oddaj</button>
                     </form>
                 </td>
             </tr>
@@ -34,5 +34,5 @@
         {% endfor %}
         </tbody>
     </table>
-    <a href="{{ path('wypozyczenie_new') }}">Wypożycz</a>
+
 {% endblock %}
