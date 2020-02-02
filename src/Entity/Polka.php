@@ -19,7 +19,7 @@ class Polka
     private $czy_pelna;
 	
 	/**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", unique=true)
      */
     private $numer;
 	
