@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Dzielo;
+use App\Entity\Uzytkownik;
 use App\Entity\Wypozyczenie;
 use App\Form\WypozyczenieType;
 use App\Repository\WypozyczenieRepository;
@@ -87,13 +88,14 @@ class WypozyczenieController extends AbstractController
         $dzielo = $this->getDoctrine()->getRepository(Dzielo::class)->find($dzielo_id);
 
         $uzytkownik_id = $request->request->get('user_id');
+        $uzytkownik = $this->getDoctrine()->getRepository(Uzytkownik::class)->find($uzytkownik_id);
         $status = $request->request->get('status');
         $data_wypozyczenia = date("Y-m-d H:i:s");
 
         $em = $this->getDoctrine()->getManager();
         $wypozyczenie = new Wypozyczenie();
         $wypozyczenie->setDzieloId($dzielo);
-        $wypozyczenie->setUzytkownikId($uzytkownik_id);
+        $wypozyczenie->setUzytkownikId($uzytkownik);
         $wypozyczenie->setStatus($status);
         $wypozyczenie->setDataWypozyczenia($data_wypozyczenia);
         $em->persist($wypozyczenie);
