@@ -71,7 +71,11 @@ class Wypozyczenie
     {
         return $this->id;
     }
-
+    public function setId($id)
+    {
+        $this->$id = $id;
+        return $this;
+    }
     public function getDzieloId(): ?Dzielo
     {
         return $this->dzielo_id;

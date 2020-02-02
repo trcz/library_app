@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Dzielo;
 use App\Entity\Wypozyczenie;
 use App\Form\WypozyczenieType;
 use App\Repository\WypozyczenieRepository;
@@ -82,7 +83,10 @@ class WypozyczenieController extends AbstractController
      */
     public function rent(Request $request)
     {
-        $dzielo_id = intval($request->request->get('dzielo'));
+        $dzielo_id = $request->request->get('dzielo');
+        $dzielo = new Dzielo();
+        $dzielo->set
+
         $uzytkownik_id = $request->request->get('user_id');
         $status = $request->request->get('status');
         $data_wypozyczenia = date("Y-m-d H:i:s");
