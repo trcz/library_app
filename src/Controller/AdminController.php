@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class AdminController extends AbstractController
 {
     /**
-     * @Route("/", name="menu_glowne")
+     * @Route("/", name="main")
      */
     public function menu()
     {
