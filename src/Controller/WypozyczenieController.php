@@ -74,9 +74,7 @@ class WypozyczenieController extends AbstractController
         $wypozyczenie->setStatus(0);
         $em->flush();
         $wypozyczenia = $this->getDoctrine()->getRepository(Wypozyczenie::class)->findBy(array('uzytkownik_id'=>$userId));
-        return $this->render('wypozyczenie/historia.html.twig',[
-            'wypozyczenies' => $wypozyczenia
-        ]);
+        return $this->redirectToRoute('historia');
     }
 
     /**
