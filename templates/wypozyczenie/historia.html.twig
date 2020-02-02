@@ -27,7 +27,7 @@
                         {% if wypozyczenie.status == 'Wypożyczone' %}
                         <button class="btn btn-sm btn-primary" href="{{ path('oddaj')}}">Oddaj</button>
                             {% else %}
-                                <button class="btn btn-sm btn" href="{{ path('oddaj')}}">Oddaj</button>
+                                <button class="btn btn-dark" href="{{ path('oddaj')}}">Oddaj</button>
                         {% endif %}
                     </form>
                 </td>
