@@ -124,7 +124,7 @@ class DzieloController extends AbstractController
 
         $dziela = $query->getResult();
         return $this->render('dzielo/index.html.twig',[
-            'dziela' => $dziela,
+            'dzielos' => $dziela,
         ]);
     }
 }
