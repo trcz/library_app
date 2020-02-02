@@ -35,6 +35,18 @@ class Uzytkownik implements UserInterface
      */
     private $password;
 
+    /**
+     * @ORM\Column(type="boolean") 
+     */
+    private $czy_dorosly;
+
+    /**
+     * @ORM\Column(type="boolean") 
+     */
+    private $czy_potwierdzone;
+    
+    
+    
     public function getId(): ?int
     {
         return $this->id;
@@ -87,6 +99,36 @@ class Uzytkownik implements UserInterface
     public function setPassword(string $password): self
     {
         $this->password = $password;
+
+        return $this;
+    }
+    
+    /**
+     * @see UserInterface
+     */
+    public function getCzy_dorosly(): boolean
+    {
+        return $this->czy_dorosly;
+    }
+
+    public function setCzy_dorosly(boolean $czy_dorosly): self
+    {
+        $this->czy_dorosly = $czy_dorosly;
+
+        return $this;
+    }
+    
+    /**
+     * @see UserInterface
+     */
+    public function getCzy_potwierdzone(): boolean
+    {
+        return $this->czy_potwierdzone;
+    }
+
+    public function setCzy_potwierdzone(boolean $czy_potwierdzone): self
+    {
+        $this->czy_potwierdzone = $czy_potwierdzone;
 
         return $this;
     }
