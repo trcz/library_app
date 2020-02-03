@@ -83,7 +83,8 @@ class Polka
     }
     public function __toString()
     {
-        return $this->numer;
+        $nazwa = strval($this->numer);
+        return $nazwa;
     }
 
 }
