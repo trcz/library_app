@@ -33,7 +33,9 @@
                 <td>{{ dzielo.czyDlaDoroslych ? 'Tak' : 'Nie' }}</td>
                 <td>
                     <a href="{{ path('dzielo_show', {'id': dzielo.id}) }}">Pokaż</a>
+                    {% if app.user.username == 'admin' %}
                     <a href="{{ path('dzielo_edit', {'id': dzielo.id}) }}">Edytuj</a>
+                    {% endif %}
                 </td>
             </tr>
         {% else %}
@@ -43,6 +45,7 @@
         {% endfor %}
         </tbody>
     </table>
-
+    {% if app.user.username == 'admin' %}
     <a href="{{ path('dzielo_new') }}">Dodaj dzieło</a>
+    {% endif %}
 {% endblock %}

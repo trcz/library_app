@@ -70,8 +70,9 @@
                 <td><button class="btn btn-sm btn-primary" type="submit" disabled>Wypożycz</button></td>
                 {% endif %}
     </form>
+            {% if app.user.username == 'admin' %}
             <td> <a class = "btn btn-sm btn-success" href="{{ path('dzielo_edit', {'id': dzielo.id}) }}">Edytuj</a></td>
-
+            {% endif %}
             <td> {{ include('dzielo/_delete_form.html.twig') }}</td>
         </tr>
     </table>
