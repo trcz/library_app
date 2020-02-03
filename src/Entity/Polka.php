@@ -81,6 +81,9 @@ class Polka
     {
         return $this->id;
     }
-
+    public function __toString()
+    {
+        return $this->numer;
+    }
 
 }
