@@ -90,7 +90,8 @@ class WypozyczenieController extends AbstractController
         $uzytkownik_id = $request->request->get('user_id');
         $uzytkownik = $this->getDoctrine()->getRepository(Uzytkownik::class)->find($uzytkownik_id);
         $status = $request->request->get('status');
-        $data_wypozyczenia = new DateTime(date("Y-m-d H:i:s"));
+        $data = date("Y-m-d H:i:s");
+        $data_wypozyczenia = \DateTime::createFromFormat("Y-m-d H:i:s",$data);
 
         $em = $this->getDoctrine()->getManager();
         $wypozyczenie = new Wypozyczenie();
