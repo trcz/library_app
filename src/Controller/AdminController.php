@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Uzytkownik;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
@@ -28,11 +29,22 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/usun", name="usun")
+     * @Route("/uzytkownicy", name="uzytkownicy")
+     */
+    public function showUsers()
+    {
+        return $this->render("/admin/uzytkownicy.html.twig",[
+            'uzytkownicy'=> $uzytkownicy = $this->getDoctrine()->getRepository(Uzytkownik::class)->findall()
+        ]);
+    }
+
+    /**
+     * @Route("/usun",name="usun")
      */
     public function deleteUser()
     {
 
     }
+
 
 }
