@@ -18,7 +18,7 @@
         {% for polka in polkas %}
             <tr>
                 <td>{{ polka.id }}</td>
-                <td>{{ polka.czyPelna ? 'Yes' : 'No' }}</td>
+                <td>{{ polka.czyPelna ? 'Tak' : 'Nie' }}</td>
                 <td>{{ polka.numer }}</td>
                 <td>
                     <a class="btn btn-primary" href="{{ path('polka_show', {'id': polka.id}) }}">Pokaż</a>
