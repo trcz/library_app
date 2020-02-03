@@ -32,9 +32,9 @@
 {#                <td>{{ dzielo.dataUsuniecia ? dzielo.dataUsuniecia|date('Y-m-d H:i:s') : '' }}</td>#}
                 <td>{{ dzielo.czyDlaDoroslych ? 'Tak' : 'Nie' }}</td>
                 <td>
-                    <a href="{{ path('dzielo_show', {'id': dzielo.id}) }}">Pokaż</a>
+                    <a class="btn btn-primary" href="{{ path('dzielo_show', {'id': dzielo.id}) }}">Pokaż</a>
                     {% if app.user.username == 'admin' %}
-                    <a href="{{ path('dzielo_edit', {'id': dzielo.id}) }}">Edytuj</a>
+                    <a class="btn btn-warning" href="{{ path('dzielo_edit', {'id': dzielo.id}) }}">Edytuj</a>
                     {% endif %}
                 </td>
             </tr>
@@ -46,6 +46,6 @@
         </tbody>
     </table>
     {% if app.user.username == 'admin' %}
-    <a href="{{ path('dzielo_new') }}">Dodaj dzieło</a>
+    <a class="btn btn-success" href="{{ path('dzielo_new') }}">Dodaj dzieło</a>
     {% endif %}
 {% endblock %}
