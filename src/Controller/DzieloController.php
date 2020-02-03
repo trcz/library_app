@@ -23,6 +23,9 @@ class DzieloController extends AbstractController
      */
     public function index(DzieloRepository $dzieloRepository): Response
     {
+
+
+
        /* $data = "Dziady";
         $em = $this->getDoctrine()->getManager();
         $query = $em->createQuery(
@@ -36,7 +39,7 @@ class DzieloController extends AbstractController
 
         return $this->render('dzielo/index.html.twig', [
             'dzielos' => $dzieloRepository->findAll(),
-            
+
 
         ]);
     }
