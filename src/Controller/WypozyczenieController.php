@@ -97,7 +97,7 @@ class WypozyczenieController extends AbstractController
         $wypozyczenie->setDzieloId($dzielo);
         $wypozyczenie->setUzytkownikId($uzytkownik);
         $wypozyczenie->setStatus($status);
-        $wypozyczenie->setDataWypozyczenia($data_wypozyczenia);
+        $wypozyczenie->setDataWypozyczenia(date("Y-m-d H:i:s"));
         $em->persist($wypozyczenie);
         $em->flush();
         return $this->redirectToRoute('historia');
