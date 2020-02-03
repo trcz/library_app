@@ -13,7 +13,10 @@
         <tr>
             <td>{{  uzytkownik.id }}</td>
             <td>{{ uzytkownik.username }}</td>
-            <td><form method="POST" action=""></form></td>
+            <td><form method="POST" action="{{ path('usun') }}">
+                    <input type="hidden" value="{{ uzytkownik.id }}" name="user_id">
+                    <button type="submit" class="btn btn-danger">Usuń</button>
+                </form></td>
         </tr>
         {% endfor %}
     </table>
