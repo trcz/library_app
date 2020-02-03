@@ -101,6 +101,10 @@ class WypozyczenieController extends AbstractController
         $wypozyczenie->setDataWypozyczenia($data_wypozyczenia);
         $em->persist($wypozyczenie);
         $em->flush();
+        $entityM = $this->getDoctrine()->getManager();
+        $dzielo->setCzyWypozyczone(1);
+        $entityM->persist($dzielo);
+        $entityM->flush();
         return $this->redirectToRoute('historia');
     }
     /**
