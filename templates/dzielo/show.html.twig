@@ -59,11 +59,16 @@
     <table>
         <tr>
             <td> <a class = "btn btn-sm btn-warning" href="{{ path('dzielo_index') }}">Powrót do listy</a></td>
-    <form method="POST" action="{{ path('wypozycz') }}">
+
+            <form method="POST" action="{{ path('wypozycz') }}">
         <input type="hidden" value="{{ dzielo.id }}" name="dzielo">
         <input type="hidden" value="{{ app.user.id }}" name="user_id">
         <input type="hidden" value="1" name="status">
+                {% if dzielo.czyWypozyczone == 1 %}
         <td><button class="btn btn-sm btn-primary" type="submit">Wypożycz</button></td>
+                {% else %}
+                <td><button class="btn btn-sm btn-primary" type="submit" disabled>Wypożycz</button></td>
+                {% endif %}
     </form>
             <td> <a class = "btn btn-sm btn-success" href="{{ path('dzielo_edit', {'id': dzielo.id}) }}">Edytuj</a></td>
 
