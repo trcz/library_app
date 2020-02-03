@@ -6,6 +6,7 @@ use App\Entity\Uzytkownik;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use Symfony\Component\HttpFoundation\Request;
 class AdminController extends AbstractController
 {
     /**
