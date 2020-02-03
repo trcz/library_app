@@ -77,6 +77,11 @@ class WypozyczenieController extends AbstractController
         $wypozyczenie->setStatus(0);
         $em->flush();
         $wypozyczenia = $this->getDoctrine()->getRepository(Wypozyczenie::class)->findBy(array('uzytkownik_id'=>$userId));
+        $entityM = $this->getDoctrine()->getManager();
+        $dzielo = $this->getDoctrine()->getRepository(Dzielo::class)->find($wypozyczenie->getDzieloId());
+        $dzielo->setCzyWypozyczone(0);
+        $entityM->persist($dzielo);
+        $entityM->flush();
         return $this->redirectToRoute('historia');
     }
     /**
