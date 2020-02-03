@@ -3,9 +3,11 @@
 {% block title %}Dodaj Wypożyczenie{% endblock %}
 
 {% block body %}
+<center>
     <h1>Dodaj Wypożyczenie</h1>
 
     {{ include('wypozyczenie/_form.html.twig') }}
 
     <a class="btn btn-warning" href="{{ path('wypozyczenie_index') }}">Powrót do listy</a>
+    </center>
 {% endblock %}

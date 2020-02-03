@@ -3,9 +3,11 @@
 {% block title %}Dodaj Autora{% endblock %}
 
 {% block body %}
+    <center>
     <h1>Dodaj Autora</h1>
 
     {{ include('autor/_form.html.twig') }}
 
     <a class="btn btn-warning" href="{{ path('autor_index') }}">Powrót do listy</a>
+    </center>
 {% endblock %}
