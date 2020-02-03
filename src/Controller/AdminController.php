@@ -47,6 +47,7 @@ class AdminController extends AbstractController
         $user_id = $request->request->get('user_id');
         $user = $this->getDoctrine()->getRepository(Uzytkownik::class)->find($user_id);
         $em = $this->getDoctrine()->getManager();
+        $user = $em->getReference(Uzytkownik::class,$user_id);
         $em->remove($user);
         $em->flush();
         return $this->redirectToRoute('uzytkownicy',[
