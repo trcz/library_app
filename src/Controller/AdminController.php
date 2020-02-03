@@ -44,7 +44,7 @@ class AdminController extends AbstractController
      */
     public function deleteUser(Request $request)
     {
-        $user_id = $request->requeset->get('user_id');
+        $user_id = $request->request->get('user_id');
         $user = $this->getDoctrine()->getRepository(Uzytkownik::class)->find($user_id);
         $em = $this->getDoctrine()->getManager();
         $em->remove($user);
