@@ -40,7 +40,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/usun",name="usun",methods={"DELETE"})
+     * @Route("/usun",name="usun",methods={"POST","DELETE"})
      */
     public function deleteUser(Request $request)
     {
