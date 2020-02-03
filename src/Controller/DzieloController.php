@@ -23,6 +23,7 @@ class DzieloController extends AbstractController
      */
     public function index(DzieloRepository $dzieloRepository): Response
     {
+<<<<<<< HEAD
        /* $data = "Dziady";
         $em = $this->getDoctrine()->getManager();
         $query = $em->createQuery(
@@ -37,6 +38,22 @@ class DzieloController extends AbstractController
         return $this->render('dzielo/index.html.twig', [
             'dzielos' => $dzieloRepository->findAll(),
             
+=======
+//        $data = "Dziady";
+//        $em = $this->getDoctrine()->getManager();
+//        $query = $em->createQuery(
+//            'SELECT p, a.nazwisko FROM App\Entity\Autor_Dzielo p LEFT JOIN p.autor_id a
+//    ')
+//            ->setParameter('data','%'.$data.'%');
+//
+//
+//        $dziela = $query->getResult();
+//
+
+        return $this->render('dzielo/index.html.twig', [
+            'dzielos' => $dzieloRepository->findAll(),
+
+>>>>>>> 0d70a70c4f64ea094b6ced19325060ca8aae3739
 
         ]);
     }
