@@ -19,8 +19,8 @@
                 <td>{{ pokoj.id }}</td>
                 <td>{{ pokoj.nazwa }}</td>
                 <td>
-                    <a href="{{ path('pokoj_show', {'id': pokoj.id}) }}">Pokaż</a>
-                    <a href="{{ path('pokoj_edit', {'id': pokoj.id}) }}">Edytuj</a>
+                    <a class="btn btn-primary" href="{{ path('pokoj_show', {'id': pokoj.id}) }}">Pokaż</a>
+                    <a class="btn btn-warning" href="{{ path('pokoj_edit', {'id': pokoj.id}) }}">Edytuj</a>
                 </td>
             </tr>
         {% else %}

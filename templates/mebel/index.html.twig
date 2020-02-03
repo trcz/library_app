@@ -21,8 +21,8 @@
                 <td>{{ mebel.iloscPolek }}</td>
                 <td>{{ mebel.nazwa }}</td>
                 <td>
-                    <a href="{{ path('mebel_show', {'id': mebel.id}) }}">Pokaż</a>
-                    <a href="{{ path('mebel_edit', {'id': mebel.id}) }}">Edytuj</a>
+                    <a class="btn btn-primary" href="{{ path('mebel_show', {'id': mebel.id}) }}">Pokaż</a>
+                    <a class="btn btn-warning" href="{{ path('mebel_edit', {'id': mebel.id}) }}">Edytuj</a>
                 </td>
             </tr>
         {% else %}

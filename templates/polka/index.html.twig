@@ -21,8 +21,8 @@
                 <td>{{ polka.czyPelna ? 'Yes' : 'No' }}</td>
                 <td>{{ polka.numer }}</td>
                 <td>
-                    <a href="{{ path('polka_show', {'id': polka.id}) }}">Pokaż</a>
-                    <a href="{{ path('polka_edit', {'id': polka.id}) }}">Edytuj</a>
+                    <a class="btn btn-primary" href="{{ path('polka_show', {'id': polka.id}) }}">Pokaż</a>
+                    <a class="btn btn-warning" href="{{ path('polka_edit', {'id': polka.id}) }}">Edytuj</a>
                 </td>
             </tr>
         {% else %}

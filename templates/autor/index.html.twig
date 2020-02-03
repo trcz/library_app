@@ -22,8 +22,8 @@
                 <td>{{ autor.imie }}</td>
                 <td>{{ autor.nazwisko }}</td>
                 <td>
-                    <a href="{{ path('autor_show', {'id': autor.id}) }}">Pokaż</a>
-                    <a href="{{ path('autor_edit', {'id': autor.id}) }}">Edytuj</a>
+                    <a class="btn btn-primary" href="{{ path('autor_show', {'id': autor.id}) }}">Pokaż</a>
+                    <a class="btn btn-warning" href="{{ path('autor_edit', {'id': autor.id}) }}">Edytuj</a>
                 </td>
             </tr>
         {% else %}
@@ -34,7 +34,7 @@
         </tbody>
     </table>
 
-    <a href="{{ path('autor_new') }}">Dodaj autora</a>
+    <a class="btn btn-success" href="{{ path('autor_new') }}">Dodaj autora</a>
     </center>
 {% endblock %}
 

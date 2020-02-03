@@ -21,8 +21,8 @@
                 <td>{{ wypozyczenie.status ? 'Wypożyczone' : 'Oddane' }}</td>
                 <td>{{ wypozyczenie.dataWypozyczenia ? wypozyczenie.dataWypozyczenia|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <a href="{{ path('wypozyczenie_show', {'id': wypozyczenie.id}) }}">Pokaż</a>
-                    <a href="{{ path('wypozyczenie_edit', {'id': wypozyczenie.id}) }}">Edytuj</a>
+                    <a class="btn btn-primary" href="{{ path('wypozyczenie_show', {'id': wypozyczenie.id}) }}">Pokaż</a>
+                    <a class="btn btn-warning" href="{{ path('wypozyczenie_edit', {'id': wypozyczenie.id}) }}">Edytuj</a>
                 </td>
             </tr>
         {% else %}
