@@ -63,7 +63,7 @@
         <input type="hidden" value="{{ dzielo.id }}" name="dzielo">
         <input type="hidden" value="{{ app.user.id }}" name="user_id">
         <input type="hidden" value="1" name="status">
-        <button class="btn btn-sm btn-primary" type="submit">Wypożycz</button>
+        <td><button class="btn btn-sm btn-primary" type="submit">Wypożycz</button></td>
     </form>
             <td> <a class = "btn btn-sm btn-success" href="{{ path('dzielo_edit', {'id': dzielo.id}) }}">Edytuj</a></td>
 
