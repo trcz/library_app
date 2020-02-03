@@ -21,7 +21,7 @@ class DzieloFormType extends AbstractType
             ->add('zdjecie')
             ->add('czy_wypozyczone')
             ->add('data_dodania')
-//            ->add('data_usuniecia')
+            ->add('data_usuniecia')
             ->add('czy_prywatne')
             ->add('czy_dla_doroslych')
             ->add('polka_id')
