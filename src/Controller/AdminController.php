@@ -41,9 +41,16 @@ class AdminController extends AbstractController
     /**
      * @Route("/usun",name="usun")
      */
-    public function deleteUser()
+    public function deleteUser(Request $request)
     {
-
+        $user_id = $request->requeset->get('user_id');
+        $user = $this->getDoctrine()->getRepository(Uzytkownik::class)->find($user_id);
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($user);
+        $em->flush();
+        return $this->redirectToRoute('uzytkownicy',[
+            'uzytkownicy'=> $uzytkownicy = $this->getDoctrine()->getRepository(Uzytkownik::class)->findall()
+        ]);
     }
 
 
