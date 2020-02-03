@@ -14,7 +14,7 @@ class DzieloType extends AbstractType
         $builder
             ->add('tytul')
             ->add('kod_jezyka')
-            ->add('rodzaj_dokumntu')
+            ->add('rodzaj_dokumentu')
             ->add('kod_dziala')
             ->add('polozenie_pierwotne')
             ->add('polozenie_aktualne')
@@ -24,7 +24,9 @@ class DzieloType extends AbstractType
             ->add('data_usuniecia')
             ->add('czy_prywatne')
             ->add('czy_dla_doroslych')
-            ->add('polka_id')
+            ->add('polka_id',null,[
+                'required'=>true,
+            ])
         ;
     }
 

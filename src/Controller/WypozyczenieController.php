@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Dzielo;
+use App\Entity\Uzytkownik;
 use App\Entity\Wypozyczenie;
 use App\Form\WypozyczenieType;
 use App\Repository\WypozyczenieRepository;
@@ -9,9 +11,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\Validator\Constraints\DateTime;
 /**
  * @Route("/wypozyczenie")
+ * @Security("is_granted('ROLE_USER')")
  */
 class WypozyczenieController extends AbstractController
 {
@@ -47,7 +53,65 @@ class WypozyczenieController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
+    /**
+     * @Route("/historia", name="historia")
+     */
+    public function history(Request $request, UserInterface $user)
+    {
+        $userId = $user->getId();
+        $wypozyczenia = $this->getDoctrine()->getRepository(Wypozyczenie::class)->findBy(array('uzytkownik_id'=>$userId));
+        return $this->render('wypozyczenie/historia.html.twig',[
+            'wypozyczenies' => $wypozyczenia,
+        ]);
+    }
 
+    /**
+     * @Route("/oddaj", name="oddaj")
+     */
+    public function giveBack(Request $request)
+    {
+        $data = $request->request->get('oddaj');
+        $userId = $request->request->get('user_id');
+        $em = $this->getDoctrine()->getManager();
+        $wypozyczenie = $em->getRepository(Wypozyczenie::class)->find($data);
+        $wypozyczenie->setStatus(0);
+        $em->flush();
+        $wypozyczenia = $this->getDoctrine()->getRepository(Wypozyczenie::class)->findBy(array('uzytkownik_id'=>$userId));
+        $entityM = $this->getDoctrine()->getManager();
+        $dzielo = $this->getDoctrine()->getRepository(Dzielo::class)->find($wypozyczenie->getDzieloId());
+        $dzielo->setCzyWypozyczone(0);
+        $entityM->persist($dzielo);
+        $entityM->flush();
+        return $this->redirectToRoute('historia');
+    }
+    /**
+     * @Route("/wypozycz", name="wypozycz")
+     */
+    public function rent(Request $request)
+    {
+        $dzielo_id = $request->request->get('dzielo');
+        $dzielo = $this->getDoctrine()->getRepository(Dzielo::class)->find($dzielo_id);
+
+        $uzytkownik_id = $request->request->get('user_id');
+        $uzytkownik = $this->getDoctrine()->getRepository(Uzytkownik::class)->find($uzytkownik_id);
+        $status = $request->request->get('status');
+        $data = date("Y-m-d H:i:s");
+        $data_wypozyczenia = \DateTime::createFromFormat("Y-m-d H:i:s",$data);
+
+        $em = $this->getDoctrine()->getManager();
+        $wypozyczenie = new Wypozyczenie();
+        $wypozyczenie->setDzieloId($dzielo);
+        $wypozyczenie->setUzytkownikId($uzytkownik);
+        $wypozyczenie->setStatus($status);
+        $wypozyczenie->setDataWypozyczenia($data_wypozyczenia);
+        $em->persist($wypozyczenie);
+        $em->flush();
+        $entityM = $this->getDoctrine()->getManager();
+        $dzielo->setCzyWypozyczone(1);
+        $entityM->persist($dzielo);
+        $entityM->flush();
+        return $this->redirectToRoute('historia');
+    }
     /**
      * @Route("/{id}", name="wypozyczenie_show", methods={"GET"})
      */
@@ -91,4 +155,5 @@ class WypozyczenieController extends AbstractController
 
         return $this->redirectToRoute('wypozyczenie_index');
     }
+
 }

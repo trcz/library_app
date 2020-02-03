@@ -8,7 +8,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UzytkownikRepository")
- * @UniqueEntity(fields={"username"}, message="There is already an account with this username")
+ * @UniqueEntity(fields={"username"}, message="Nazwa użytkownika jest już zajęta.")
  */
 class Uzytkownik implements UserInterface
 {
@@ -34,6 +34,8 @@ class Uzytkownik implements UserInterface
      * @ORM\Column(type="string")
      */
     private $password;
+
+
 
     public function getId(): ?int
     {

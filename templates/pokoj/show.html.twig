@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Pokoj{% endblock %}
+{% block title %}Pokój{% endblock %}
 
 {% block body %}
-    <h1>Pokoj</h1>
+    <h1>Pokój</h1>
 
     <table class="table">
         <tbody>
@@ -18,9 +18,9 @@
         </tbody>
     </table>
 
-    <a href="{{ path('pokoj_index') }}">back to list</a>
+    <a href="{{ path('pokoj_index') }}">bPowrót do listy</a>
 
-    <a href="{{ path('pokoj_edit', {'id': pokoj.id}) }}">edit</a>
+    <a href="{{ path('pokoj_edit', {'id': pokoj.id}) }}">Edytuj</a>
 
     {{ include('pokoj/_delete_form.html.twig') }}
 {% endblock %}

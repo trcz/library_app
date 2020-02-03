@@ -33,7 +33,7 @@ class DzieloControllerx extends AbstractController
     }
     
     /**
-     * @Route("/", name="main")
+     * @Route("/aaaa", name="mainx")
      */
     public function index()
     {

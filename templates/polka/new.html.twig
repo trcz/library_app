@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Polka{% endblock %}
+{% block title %}Dodaj Półkę{% endblock %}
 
 {% block body %}
-    <h1>Create new Polka</h1>
+    <h1>Dodaj Półkę</h1>
 
     {{ include('polka/_form.html.twig') }}
 
-    <a href="{{ path('polka_index') }}">back to list</a>
+    <a class="btn btn-warning" href="{{ path('polka_index') }}">Powrót do listy</a>
 {% endblock %}

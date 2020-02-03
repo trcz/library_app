@@ -14,8 +14,9 @@ class PolkaType extends AbstractType
         $builder
             ->add('czy_pelna')
             ->add('numer')
-            ->add('mebel_id')
-        ;
+            ->add('mebel_id',null,[
+                'required'=>true,
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)

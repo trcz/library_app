@@ -1,17 +1,18 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Autor index{% endblock %}
+{% block title %}Autorzy{% endblock %}
 
 {% block body %}
-    <h1>Autor index</h1>
+<center>
+<h1>Autorzy</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Imie</th>
+                <th>ID</th>
+                <th>Imię</th>
                 <th>Nazwisko</th>
-                <th>actions</th>
+                <th>Akcje</th>
             </tr>
         </thead>
         <tbody>
@@ -21,17 +22,19 @@
                 <td>{{ autor.imie }}</td>
                 <td>{{ autor.nazwisko }}</td>
                 <td>
-                    <a href="{{ path('autor_show', {'id': autor.id}) }}">show</a>
-                    <a href="{{ path('autor_edit', {'id': autor.id}) }}">edit</a>
+                    <a class="btn btn-primary" href="{{ path('autor_show', {'id': autor.id}) }}">Pokaż</a>
+                    <a class="btn btn-warning" href="{{ path('autor_edit', {'id': autor.id}) }}">Edytuj</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="4">no records found</td>
+                <td colspan="4">Brak znalezionych rekordów</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('autor_new') }}">Create new</a>
+    <a class="btn btn-success" href="{{ path('autor_new') }}">Dodaj autora</a>
+    </center>
 {% endblock %}
+

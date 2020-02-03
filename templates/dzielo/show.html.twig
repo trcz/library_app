@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Dzielo{% endblock %}
+{% block title %}Dzieło{% endblock %}
 
 {% block body %}
-    <h1>Dzielo</h1>
+    <center><h1>Dzieło</h1>
 
     <table class="table">
         <tbody>
@@ -20,19 +20,15 @@
                 <td>{{ dzielo.kodJezyka }}</td>
             </tr>
             <tr>
-                <th>Rodzaj_dokumntu</th>
-                <td>{{ dzielo.rodzajDokumntu }}</td>
+                <th>Rodzaj dokumentu</th>
+                <td>{{ dzielo.rodzajDokumentu }}</td>
             </tr>
             <tr>
-                <th>Kod_dziala</th>
-                <td>{{ dzielo.kodDziala }}</td>
-            </tr>
-            <tr>
-                <th>Polozenie_pierwotne</th>
+                <th>Polozenie pierwotne</th>
                 <td>{{ dzielo.polozeniePierwotne }}</td>
             </tr>
             <tr>
-                <th>Polozenie_aktualne</th>
+                <th>Polozenie aktualne</th>
                 <td>{{ dzielo.polozenieAktualne }}</td>
             </tr>
             <tr>
@@ -40,31 +36,45 @@
                 <td>{{ dzielo.zdjecie }}</td>
             </tr>
             <tr>
-                <th>Czy_wypozyczone</th>
-                <td>{{ dzielo.czyWypozyczone ? 'Yes' : 'No' }}</td>
+                <th>Czy wypożyczone</th>
+                <td>{{ dzielo.czyWypozyczone ? 'Tak' : 'Nie' }}</td>
             </tr>
+            {% if app.user.username == 'admin' %}
             <tr>
-                <th>Data_dodania</th>
+                <th>Data dodania</th>
                 <td>{{ dzielo.dataDodania ? dzielo.dataDodania|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
+
             <tr>
-                <th>Data_usuniecia</th>
-                <td>{{ dzielo.dataUsuniecia ? dzielo.dataUsuniecia|date('Y-m-d H:i:s') : '' }}</td>
+                <th>Czy prywatne</th>
+                <td>{{ dzielo.czyPrywatne ? 'Tak' : 'Nie' }}</td>
             </tr>
+            {% endif %}
             <tr>
-                <th>Czy_prywatne</th>
-                <td>{{ dzielo.czyPrywatne ? 'Yes' : 'No' }}</td>
-            </tr>
-            <tr>
-                <th>Czy_dla_doroslych</th>
-                <td>{{ dzielo.czyDlaDoroslych ? 'Yes' : 'No' }}</td>
+                <th>Czy dla doroslych</th>
+                <td>{{ dzielo.czyDlaDoroslych ? 'Tak' : 'Nie' }}</td>
             </tr>
         </tbody>
     </table>
+    <table>
+        <tr>
+            <td> <a class = "btn btn-sm btn-warning" href="{{ path('dzielo_index') }}">Powrót do listy</a></td>
 
-    <a href="{{ path('dzielo_index') }}">back to list</a>
-
-    <a href="{{ path('dzielo_edit', {'id': dzielo.id}) }}">edit</a>
-
-    {{ include('dzielo/_delete_form.html.twig') }}
+            <form method="POST" action="{{ path('wypozycz') }}">
+        <input type="hidden" value="{{ dzielo.id }}" name="dzielo">
+        <input type="hidden" value="{{ app.user.id }}" name="user_id">
+        <input type="hidden" value="1" name="status">
+                {% if dzielo.czyWypozyczone == 0 %}
+        <td><button class="btn btn-sm btn-primary" type="submit">Wypożycz</button></td>
+                {% else %}
+                <td><button class="btn btn-sm btn-primary" type="submit" disabled>Wypożycz</button></td>
+                {% endif %}
+    </form>
+            {% if app.user.username == 'admin' %}
+            <td> <a class = "btn btn-sm btn-success" href="{{ path('dzielo_edit', {'id': dzielo.id}) }}">Edytuj</a></td>
+            {% endif %}
+            <td> {{ include('dzielo/_delete_form.html.twig') }}</td>
+        </tr>
+    </table>
+    </center>
 {% endblock %}

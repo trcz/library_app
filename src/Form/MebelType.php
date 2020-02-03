@@ -14,7 +14,9 @@ class MebelType extends AbstractType
         $builder
             ->add('ilosc_polek')
             ->add('nazwa')
-            ->add('pokoj_id')
+            ->add('pokoj_id',null,[
+                'required'=>true,
+            ])
         ;
     }
 

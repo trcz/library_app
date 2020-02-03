@@ -10,10 +10,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 /**
  * @Route("/dzielo")
+ * @Security("is_granted('ROLE_USER')")
  */
 class DzieloController extends AbstractController
 {
@@ -22,16 +23,19 @@ class DzieloController extends AbstractController
      */
     public function index(DzieloRepository $dzieloRepository): Response
     {
-//        $data = "Dziady";
-//        $em = $this->getDoctrine()->getManager();
-//        $query = $em->createQuery(
-//            'SELECT p, a.nazwisko FROM App\Entity\Autor_Dzielo p LEFT JOIN p.autor_id a
-//    ')
-//            ->setParameter('data','%'.$data.'%');
-//
-//
-//        $dziela = $query->getResult();
-//
+
+
+
+       /* $data = "Dziady";
+        $em = $this->getDoctrine()->getManager();
+        $query = $em->createQuery(
+            'SELECT p, a.nazwisko FROM App\Entity\Autor_Dzielo p LEFT JOIN p.autor_id a
+    ')
+            ->setParameter('data','%'.$data.'%');
+
+
+        $dziela = $query->getResult();*/
+
 
         return $this->render('dzielo/index.html.twig', [
             'dzielos' => $dzieloRepository->findAll(),
@@ -123,8 +127,8 @@ class DzieloController extends AbstractController
 
 
         $dziela = $query->getResult();
-        return $this->render('dzielo/index_.html.twig',[
-            'dziela' => $dziela,
+        return $this->render('dzielo/index.html.twig',[
+            'dzielos' => $dziela,
         ]);
     }
 }
